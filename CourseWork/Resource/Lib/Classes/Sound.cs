@@ -62,7 +62,7 @@ namespace CourseWork
                     if (freq != 0)
                     {
                     //вывод частоты
-                    
+                    _window.textBox.Text = freq.ToString();
                     }
 
                 } while (bytesRead != 0);

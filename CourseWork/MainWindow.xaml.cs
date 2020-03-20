@@ -42,6 +42,7 @@ namespace CourseWork
                 MessageBox.Show("ERROR: no recording devices available");
         }
 
+        //По нажатию этой кнопки, должен начаться анализ звука
         private void BtnStart_Click(object sender, EventArgs e)
         {
             Sound sound = new Sound(this);
@@ -50,6 +51,7 @@ namespace CourseWork
                 sound.StartDetect(cdDevice.SelectedIndex);
             }));
         }
+
         private static void ButtonAccsess(int numberButton)
         {
             for (int i = 0; i < checkOnClick.Length; i++)
@@ -72,8 +74,6 @@ namespace CourseWork
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             ButtonAccsess(0);
-            OxyPlot.Wpf.PlotView plotView = new OxyPlot.Wpf.PlotView();
-            plotView.Margin = new Thickness(0, 0, 82, 10);
         }
         private void button2_Click(object sender, RoutedEventArgs e)
         {
