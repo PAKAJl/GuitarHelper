@@ -1,5 +1,8 @@
-﻿using System;
+﻿using NAudio.Wave;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,42 +19,27 @@ namespace CourseWork
     {
         private static bool[] checkOnClick;
         private static Button[] buttonsList;
-        public double freq;
+        private Sound sound = new Sound();
+        
+
+
         public MainWindow()
         {
             InitializeComponent();
-            ScanSoundCards();
-            checkOnClick = new bool[2];
-            buttonsList = new Button[2];
-            buttonsList[0] = button0;
-            buttonsList[1] = button1;
+            
+            checkOnClick = new bool[3];
+            buttonsList = new Button[3];
+            buttonsList[0] = TunnerButton;
+            buttonsList[1] = LessonButton;
+            buttonsList[2] = ChordsButton;
             for (int i = 0; i < checkOnClick.Length; i++)
             {
                 checkOnClick[i] = false;
             }
+            Frames.Navigate(new Resource.Pages.LoginPage(this));
         }
         
-        private void ScanSoundCards()
-        {
-            cdDevice.Items.Clear();
-            for (int i = 0; i < NAudio.Wave.WaveIn.DeviceCount; i++)
-                cdDevice.Items.Add(NAudio.Wave.WaveIn.GetCapabilities(i).ProductName);
-            if (cdDevice.Items.Count > 0)
-                cdDevice.SelectedIndex = 0;
-            else
-                MessageBox.Show("ERROR: no recording devices available");
-        }
-
-        //По нажатию этой кнопки, должен начаться анализ звука
-        private void BtnStart_Click(object sender, EventArgs e)
-        {
-            Sound sound = new Sound(this);
-            this.Dispatcher.BeginInvoke(new ThreadStart(delegate
-            {
-                sound.StartDetect(cdDevice.SelectedIndex);
-            }));
-        }
-
+        
         private static void ButtonAccsess(int numberButton)
         {
             for (int i = 0; i < checkOnClick.Length; i++)
@@ -70,15 +58,25 @@ namespace CourseWork
                     buttonsList[i].Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#525252"));
                 }
             }
-        }  
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            ButtonAccsess(0);
-        }
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-            ButtonAccsess(1);
         }
 
+        private void TunnerButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonAccsess(0);
+
+            Frames.Navigate(new Resource.Pages.TunnerPage());
+        }
+
+        private void LessonButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonAccsess(1);
+            Frames.Navigate(new Resource.Pages.LessonsPage());
+        }
+
+        private void ChordsButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonAccsess(2);
+            Frames.Navigate(new Resource.Pages.ChordsPage(this));
+        }
     }
 }

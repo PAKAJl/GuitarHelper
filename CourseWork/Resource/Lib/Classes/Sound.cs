@@ -3,19 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Media;
 using System.Threading;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace CourseWork
 {
     public class Sound
     {
-        private MainWindow _window;
-
-        public Sound(MainWindow window)
-        {
-            _window = window;
-        }
-
-        BufferedWaveProvider bufferedWaveProvider = null;
+        public BufferedWaveProvider bufferedWaveProvider = null;
         Dictionary<string, float> noteBaseFreqs = new Dictionary<string, float>()
             {
                 { "C", 16.35f },
@@ -32,47 +27,8 @@ namespace CourseWork
                 { "B", 30.87f },
             };
 
-
-        public void StartDetect(int inputDevice)
-        {
-           
-                WaveInEvent waveIn = new WaveInEvent();
-
-                waveIn.DeviceNumber = inputDevice;
-                waveIn.WaveFormat = new WaveFormat(44100, 1);
-                waveIn.DataAvailable += WaveIn_DataAvailable;
-
-                bufferedWaveProvider = new BufferedWaveProvider(waveIn.WaveFormat);
-
-                // begin record
-                waveIn.StartRecording();
-
-                IWaveProvider stream = new Wave16ToFloatProvider(bufferedWaveProvider);
-                Pitch pitch = new Pitch(stream);
-
-                byte[] buffer = new byte[8192];
-                int bytesRead;
-
-                do
-                {
-                    bytesRead = stream.Read(buffer, 0, buffer.Length);
-
-                    float freq = pitch.Get(buffer);
-
-                    if (freq != 0)
-                    {
-                    //вывод частоты
-                    _window.textBox.Text = freq.ToString();
-                    }
-
-                } while (bytesRead != 0);
-
-                // stop recording
-                waveIn.StopRecording();
-                waveIn.Dispose();
-        }
-
-        void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
+       
+        public void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
             if (bufferedWaveProvider != null)
             {
