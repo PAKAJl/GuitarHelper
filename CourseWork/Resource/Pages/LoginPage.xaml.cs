@@ -22,9 +22,9 @@ namespace CourseWork.Resource.Pages
     /// </summary>
     public partial class LoginPage : Page
     {
-        private MainWindow mWindow; 
+        private MainWindow mWindow;
         private ConnectedClass connection = new ConnectedClass();
-            
+
         public LoginPage(MainWindow mWindow)
         {
             InitializeComponent();
@@ -36,17 +36,12 @@ namespace CourseWork.Resource.Pages
             mWindow.Frames.Navigate(new RegisterPage(mWindow));
         }
 
-        private void signInButton_Click(object sender, RoutedEventArgs e)
+        private async void signInButton_Click(object sender, RoutedEventArgs e)
         {
-            bool success = connection.SignIn(loginTextBox.Text, passwordTextBox.Text);
+            bool success = await connection.SignIn(loginTextBox.Text, passwordTextBox.Text);
             if (success)
             {
-                this.Dispatcher.BeginInvoke((ThreadStart)delegate () {
-                    mWindow.accountName.Content = loginTextBox;
-                    mWindow.accountAvatar.Source = new BitmapImage(new Uri(connection.GetAvatar(loginTextBox.Text), UriKind.Relative));
-                    
-                });
-                
+                mWindow.accountName.Content = loginTextBox.Text;
             }
         }
     }

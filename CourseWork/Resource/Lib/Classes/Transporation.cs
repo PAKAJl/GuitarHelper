@@ -93,13 +93,14 @@ namespace CourseWork.Resource.Lib.Classes
                         if (ChordDefine(i, text) == chords[j])
                         {
                             check = true;
-                            if (j == 11)
+                            if (j == 0)
                             {
-                                transporatedText += chords[0];
+                                transporatedText += chords[11];
+                                break;
                             }
                             else
                             {
-                                transporatedText += chords[j + 1];
+                                transporatedText += chords[j - 1];
                                 break;
                             }
                         }

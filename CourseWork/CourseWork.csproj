@@ -57,6 +57,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -185,6 +186,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EntityDeploy Include="DataBase\GuitaerHelperDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -220,7 +222,8 @@
       <DependentUpon>GuitaerHelperDBModel.edmx</DependentUpon>
       <LastGenOutput>GuitaerHelperDBModel.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resource\Pictures\noavatar.png" />
+    <Resource Include="Resource\Pictures\Unfavorite.png" />
+    <Resource Include="Resource\Pictures\Favorite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

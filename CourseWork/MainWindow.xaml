@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseWork"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" Background="#FF525252">
+        Title="MainWindow" Height="800" Width="1200" Background="#FF525252">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -71,7 +71,6 @@
                     <ColumnDefinition Width="40"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" x:Name="accountAvatar" Source="/Resource/Pictures/noavatar.png"  Width="40" HorizontalAlignment="Right"/>
                 <Label Grid.Column="1" x:Name="accountName" Content="Гость" FontFamily="Rubik" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0"/>
             </Grid>
             <Grid Grid.Row="1" Background="#7B7D00"></Grid>

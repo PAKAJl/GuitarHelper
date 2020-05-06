@@ -40,6 +40,7 @@ namespace CourseWork.Resource.Pages
             connection.SelectSongs();
             songsList = connection.songsList;
             songListBox.ItemsSource = songsList.Keys;
+            favoriteImage.Source = (BitmapImage)Application.Current.Resources["Unfavorite"];
         }
 
         private void songListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -82,14 +83,14 @@ namespace CourseWork.Resource.Pages
             {
                 tone++;
                 toneLabel.Content = "+" + tone;
-                songText.Text = trans.TransporateDown(songText.Text);
+                songText.Text = trans.TransporateUp(songText.Text);
                 return;
             }
             if (tone < -1)
             {
                 tone++;
-                toneLabel.Content = "-" + tone;
-                songText.Text = trans.TransporateDown(songText.Text);
+                toneLabel.Content = tone;
+                songText.Text = trans.TransporateUp(songText.Text);
                 return;
 
             }
@@ -97,29 +98,28 @@ namespace CourseWork.Resource.Pages
             {
                 tone++;
                 toneLabel.Content = tone;
-                songText.Text = trans.TransporateDown(songText.Text);
+                songText.Text = trans.TransporateUp(songText.Text);
                 return;
             }
         }
 
         private void minusTone_Click(object sender, RoutedEventArgs e)
         {
-
-            if ((tone <= 8) && (tone >= 0))
+            if (tone == 1)
+            {
+                tone--;
+                toneLabel.Content = tone;
+                songText.Text = trans.TransporateDown(songText.Text);
+                return;
+            }
+            if ((tone >= 2) && (tone <= 8))
             {
                 tone--;
                 toneLabel.Content = "+" + tone;
                 songText.Text = trans.TransporateDown(songText.Text);
                 return;
             }
-            if (tone < 0)
-            {
-                tone--;
-                toneLabel.Content = "-" + tone;
-                songText.Text = trans.TransporateDown(songText.Text);
-                return;
-            }
-            if (tone == 1)
+            if ((tone<=0)&&(tone >-8))
             {
                 tone--;
                 toneLabel.Content = tone;

@@ -6,12 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using System.Data.Entity;
 
 namespace CourseWork.DataBase
 {
     class ConnectedClass
     {
         public Dictionary<string, string> songsList;
+
         public void SelectSongs()
         {
             songsList = new Dictionary<string, string>();
@@ -23,7 +25,7 @@ namespace CourseWork.DataBase
 
                 }
 
-            }
+            };
         }
 
         public void DeleteSong(string name)
@@ -57,29 +59,37 @@ namespace CourseWork.DataBase
             return Convert.ToBase64String(hash);
         }
 
-        public bool SignIn(string login, string password)
+        public async Task<bool> SignIn(string login, string password)
         {
+            bool result = false;
             using (mainConnectedDB context = new mainConnectedDB())
             {
-                foreach (var user in context.Users)
+                await context.Users.ForEachAsync(user =>
                 {
                     if ((user.Login == login) & (user.Password == GetHash(password)))
                     {
-                        MessageBox.Show("Вход выполнен успешно!");
-                        return true;
-                    }
-                }
-                MessageBox.Show("Неправильный логин или пароль!");
-                return false;
+
+                        result = true;
+                    } });
             }
+            if (result)
+            {
+                MessageBox.Show("Вход выполнен успешно!");
+            }
+            else
+            {
+                MessageBox.Show("Неправильный логин или пароль!");
+            }
+            return result;
         }
+
 
         public bool SingUp(string login, string password)
         {
             Users newUser = new Users();
             newUser.Login = login;
             newUser.Password = GetHash(password);
-            newUser.Avatar = @"\Resource\Pictures\noavatar.png";
+            newUser.Avatar = @"\\Resource\\Pictures\\noavatar.png";
             using (mainConnectedDB context = new mainConnectedDB())
             {
                 foreach (var user in context.Users)
@@ -110,7 +120,7 @@ namespace CourseWork.DataBase
                     }
                 }
             }
-            return @"\Resource\Pictures\noavatar.png";
+            return @"\\Resource\\Pictures\\noavatar.png";
         }
     }
 }
