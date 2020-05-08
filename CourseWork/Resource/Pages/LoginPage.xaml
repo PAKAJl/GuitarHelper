@@ -21,7 +21,7 @@
         <Label Grid.Row="0" Content="Логин" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
         <TextBox Grid.Row="1" x:Name="loginTextBox" Height="25" Width="200" VerticalAlignment="Top"/>
         <Label Grid.Row="2" Content="Пароль" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="3" x:Name="passwordTextBox" Height="25" Width="200" VerticalAlignment="Top"/>
+        <PasswordBox Grid.Row="3" x:Name="passwordTextBox" Height="25" Width="200" VerticalAlignment="Top"/>
         <Button Grid.Row="4" Click="signInButton_Click" x:Name="signInButton" Content="Войти" Width="200" Height="50" VerticalAlignment="Top" FontFamily="Rubik" Background="#F9D100"/>
         <Button Margin="0 10" Click="signUpButton_Click" Grid.Row="5" x:Name="signUpButton" Content="Зарегистрироваться" Width="200" Height="50" VerticalAlignment="Top" FontFamily="Rubik" Background="#F9D100"/>
     </Grid>

@@ -20,5 +20,7 @@
     <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FavoritesSongs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeInApp" Type="Int32" />
   </EntityType>
 </Schema>

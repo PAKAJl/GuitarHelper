@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseWork"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200" Background="#FF525252">
+        Title="MainWindow" Height="800" Width="1200" Background="#FF525252" Closing="Window_Closing">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -49,6 +49,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -66,12 +67,19 @@
                 <RowDefinition />
                 <RowDefinition Height="5"/>
             </Grid.RowDefinitions>
-            <Grid Width="200" HorizontalAlignment="Right" Margin="20 0">
+            <Grid  HorizontalAlignment="Right" Margin="20 0">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="40"/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="120"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="1" x:Name="accountName" Content="Гость" FontFamily="Rubik" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0"/>
+                <Button Grid.Row="0" x:Name="toProfileButton" Click="toProfileButton_Click" Margin="10" Content="Профиль" Height="50" VerticalAlignment="Center" FontFamily="Rubik" Background="#FFf9b000" Style="{DynamicResource AsideButtons}"/>
+                <Ellipse Grid.Column="1" Height="40">
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="avatarImage"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Label Grid.Column="2" x:Name="accountName" Content="Гость" FontFamily="Rubik" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0"/>
             </Grid>
             <Grid Grid.Row="1" Background="#7B7D00"></Grid>
         </Grid>

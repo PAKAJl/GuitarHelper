@@ -13,6 +13,8 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="GuitarHelperDBModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="TimeInApp" ColumnName="TimeInApp" />
+          <ScalarProperty Name="FavoritesSongs" ColumnName="FavoritesSongs" />
           <ScalarProperty Name="Avatar" ColumnName="Avatar" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Login" ColumnName="Login" />

@@ -1,4 +1,5 @@
-﻿using NAudio.Wave;
+﻿using CourseWork.DataBase;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
 namespace CourseWork
@@ -20,9 +22,20 @@ namespace CourseWork
         private static bool[] checkOnClick;
         private static Button[] buttonsList;
         private Sound sound = new Sound();
-        
+        private DispatcherTimer timerInApp = new DispatcherTimer();
+        private int timeInSessoin = 0;
+        private ConnectedClass connection = new ConnectedClass();
 
-
+        public void TimerT()
+        {
+            timerInApp.Tick += new EventHandler(incTimer);
+            timerInApp.Interval = new TimeSpan(0, 0, 0, 1);
+            timerInApp.Start();
+        }
+        private void incTimer(object sender, EventArgs e)
+        {
+            timeInSessoin++;
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +50,10 @@ namespace CourseWork
                 checkOnClick[i] = false;
             }
             Frames.Navigate(new Resource.Pages.LoginPage(this));
+            string imagePath = $"../../Resource/Pictures/Avatars/NoAvatar.png";
+            Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+            avatarImage.ImageSource = new BitmapImage(imageUri);
+            
         }
         
         
@@ -77,6 +94,20 @@ namespace CourseWork
         {
             ButtonAccsess(2);
             Frames.Navigate(new Resource.Pages.ChordsPage(this));
+        }
+
+        private void toProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frames.Navigate(new Resource.Pages.ProfilePage(this));
+        }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            if (accountName.Content.ToString() != "Гость")
+            {
+                connection.UpdateTimeInApp(timeInSessoin, accountName.Content.ToString());
+            }
+            timerInApp.Stop();
         }
     }
 }

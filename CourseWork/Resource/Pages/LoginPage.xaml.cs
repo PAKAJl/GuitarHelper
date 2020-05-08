@@ -19,7 +19,6 @@ namespace CourseWork.Resource.Pages
 {
     /// <summary>
     /// Логика взаимодействия для LoginPage.xaml
-    /// </summary>
     public partial class LoginPage : Page
     {
         private MainWindow mWindow;
@@ -38,10 +37,14 @@ namespace CourseWork.Resource.Pages
 
         private async void signInButton_Click(object sender, RoutedEventArgs e)
         {
-            bool success = await connection.SignIn(loginTextBox.Text, passwordTextBox.Text);
+            bool success = await connection.SignIn(loginTextBox.Text, passwordTextBox.Password);
             if (success)
             {
                 mWindow.accountName.Content = loginTextBox.Text;
+                string imagePath = "../../Resource/Pictures/Avatars/"+ connection.GetAvatar(loginTextBox.Text);
+                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+                mWindow.avatarImage.ImageSource = new BitmapImage(imageUri);
+                mWindow.TimerT();
             }
         }
     }

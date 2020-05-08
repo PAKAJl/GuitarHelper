@@ -18,5 +18,7 @@ namespace CourseWork.DataBase
         public string Login { get; set; }
         public string Password { get; set; }
         public string Avatar { get; set; }
+        public string FavoritesSongs { get; set; }
+        public Nullable<int> TimeInApp { get; set; }
     }
 }

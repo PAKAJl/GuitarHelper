@@ -119,6 +119,9 @@
     <Compile Include="Resource\Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resource\Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resource\Pages\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
@@ -153,6 +156,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resource\Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\ProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -207,6 +214,7 @@
   <ItemGroup>
     <Folder Include="Resource\Lib\Classes\IInterfaces\" />
     <Folder Include="Resource\Lib\Librares\" />
+    <Folder Include="Windows\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -222,6 +230,23 @@
       <DependentUpon>GuitaerHelperDBModel.edmx</DependentUpon>
       <LastGenOutput>GuitaerHelperDBModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resource\Pictures\Avatars\1.png" />
+    <Resource Include="Resource\Pictures\Avatars\10.png" />
+    <Resource Include="Resource\Pictures\Avatars\11.png" />
+    <Resource Include="Resource\Pictures\Avatars\12.png" />
+    <Resource Include="Resource\Pictures\Avatars\13.png" />
+    <Resource Include="Resource\Pictures\Avatars\14.png" />
+    <Resource Include="Resource\Pictures\Avatars\15.png" />
+    <Resource Include="Resource\Pictures\Avatars\16.png" />
+    <Resource Include="Resource\Pictures\Avatars\2.png" />
+    <Resource Include="Resource\Pictures\Avatars\3.png" />
+    <Resource Include="Resource\Pictures\Avatars\4.png" />
+    <Resource Include="Resource\Pictures\Avatars\5.png" />
+    <Resource Include="Resource\Pictures\Avatars\6.png" />
+    <Resource Include="Resource\Pictures\Avatars\7.png" />
+    <Resource Include="Resource\Pictures\Avatars\8.png" />
+    <Resource Include="Resource\Pictures\Avatars\9.png" />
+    <Resource Include="Resource\Pictures\Avatars\NoAvatar.png" />
     <Resource Include="Resource\Pictures\Unfavorite.png" />
     <Resource Include="Resource\Pictures\Favorite.png" />
   </ItemGroup>

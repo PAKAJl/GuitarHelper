@@ -40,7 +40,9 @@ namespace CourseWork.Resource.Pages
             connection.SelectSongs();
             songsList = connection.songsList;
             songListBox.ItemsSource = songsList.Keys;
-            favoriteImage.Source = (BitmapImage)Application.Current.Resources["Unfavorite"];
+            string imagePath = $"../Pictures/Unfavorite.png";
+            Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+            favoriteImage.Source = new BitmapImage(imageUri);
         }
 
         private void songListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -128,6 +130,11 @@ namespace CourseWork.Resource.Pages
             }
         }
 
-
+        private void favoriteImage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            string imagePath = $"../Pictures/Favorite.png";
+            Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+            favoriteImage.Source = new BitmapImage(imageUri);
+        }
     }
 }

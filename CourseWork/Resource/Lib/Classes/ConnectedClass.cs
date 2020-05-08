@@ -51,7 +51,7 @@ namespace CourseWork.DataBase
             }
         }
 
-        private string GetHash(string input)
+        public string GetHash(string input)
         {
             var md5 = MD5.Create();
             var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
@@ -70,7 +70,8 @@ namespace CourseWork.DataBase
                     {
 
                         result = true;
-                    } });
+                    }
+                });
             }
             if (result)
             {
@@ -83,13 +84,39 @@ namespace CourseWork.DataBase
             return result;
         }
 
+        public void UpdateTimeInApp(int time, string login)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
+                userInfo.TimeInApp += time;
+                context.SaveChanges();
+            }
+        }
+
+        public async Task<int> GetTimeInApp(string login)
+        {
+            int result = 0;
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                await context.Users.ForEachAsync(user =>
+                {
+                    if (user.Login == login)
+                    {
+                        result = (int)user.TimeInApp;
+                    }
+                });
+            }
+            return result;
+        }
 
         public bool SingUp(string login, string password)
         {
             Users newUser = new Users();
             newUser.Login = login;
             newUser.Password = GetHash(password);
-            newUser.Avatar = @"\\Resource\\Pictures\\noavatar.png";
+            newUser.Avatar = @"NoAvatar.png";
+            newUser.TimeInApp = 0;
             using (mainConnectedDB context = new mainConnectedDB())
             {
                 foreach (var user in context.Users)
@@ -120,7 +147,67 @@ namespace CourseWork.DataBase
                     }
                 }
             }
-            return @"\\Resource\\Pictures\\noavatar.png";
+            return "";
+        }
+
+        public void UpdateUserLogin(string oldName, string newName)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                foreach (var user in context.Users)
+                {
+                    if (oldName == user.Login)
+                    {
+                        user.Login = newName;
+                    }
+                }
+                context.SaveChanges();
+            }
+        }
+
+        public void UpdateUserPass(string oldName, string newPass)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                foreach (var user in context.Users)
+                {
+                    if (oldName == user.Login)
+                    {
+                        user.Password = GetHash(newPass);
+                    }
+                }
+                context.SaveChanges();
+            }
+        }
+
+        public void UpdateUserAvatar(string oldName, string newAvatar)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                foreach (var user in context.Users)
+                {
+                    if (oldName == user.Login)
+                    {
+                        user.Avatar = newAvatar;
+                    }
+                }
+                context.SaveChanges();
+            }
+        }
+
+        public string GetPass(string login)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                foreach (var user in context.Users)
+                {
+                    if (login == user.Login)
+                    {
+                        return user.Password;
+                    }
+                }
+            }
+            return "";
         }
     }
 }

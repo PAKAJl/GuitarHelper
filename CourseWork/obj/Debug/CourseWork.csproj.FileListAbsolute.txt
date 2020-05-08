@@ -49,7 +49,6 @@ E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlServ
 E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\NAudio.xml
 E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\OxyPlot.xml
 E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\OxyPlot.Wpf.xml
-E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ChordsPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsPage.g.cs
@@ -57,12 +56,10 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LoginPag
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RegisterPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\UI\Tuners\GuitarTuner.g.cs
-E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\App.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork_Content.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork_MarkupCompile.cache
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork_MarkupCompile.lref
-E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ChordsPage.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsPage.baml
@@ -77,4 +74,9 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CoreC
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CopyComplete
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.exe
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.pdb
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.g.cs
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\App.g.cs
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csprojAssemblyReference.cache
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.g.cs
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.baml
