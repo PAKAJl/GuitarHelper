@@ -110,6 +110,9 @@
     <Compile Include="Resource\Pages\AddSongPage.xaml.cs">
       <DependentUpon>AddSongPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resource\Pages\ApplicaturePage.xaml.cs">
+      <DependentUpon>ApplicaturePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resource\Pages\ChordsPage.xaml.cs">
       <DependentUpon>ChordsPage.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,9 @@
     </Compile>
     <Compile Include="Resource\Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\RecoveryPage.xaml.cs">
+      <DependentUpon>RecoveryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resource\Pages\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
@@ -147,6 +153,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resource\Pages\ApplicaturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resource\Pages\ChordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resource\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\RecoveryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -230,6 +244,54 @@
       <DependentUpon>GuitaerHelperDBModel.edmx</DependentUpon>
       <LastGenOutput>GuitaerHelperDBModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resource\Pictures\Aplicatures\A.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\A5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\A7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Am.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\B.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\B5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\B7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Bm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\C.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\C5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\C7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\D.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\D5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\D7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Dm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\E.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\E5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\E7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Em.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\F.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\F5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\F7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\G.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\G5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\G7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gm.jpg" />
     <Resource Include="Resource\Pictures\Avatars\1.png" />
     <Resource Include="Resource\Pictures\Avatars\10.png" />
     <Resource Include="Resource\Pictures\Avatars\11.png" />

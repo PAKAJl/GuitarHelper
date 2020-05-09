@@ -1,0 +1,78 @@
+﻿<Page x:Class="CourseWork.Resource.Pages.ApplicaturePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWork.Resource.Pages"
+      mc:Ignorable="d"
+      Title="ApplicaturePage"
+      Background="#FF525252" Height="600" Width="600">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0"  x:Name="noteListUpButton" Click="noteListUpButton_Click" Content="▲" FontFamily="Rubik" Background="#F9D100"/>
+                <Button Grid.Row="2" Click="noteListDownButton_Click" x:Name="noteListDownButton" Content="▼"  FontFamily="Rubik" Background="#F9D100"/>
+                <ListView Foreground="White"  ScrollViewer.VerticalScrollBarVisibility="Hidden" FontFamily="Rubik" FontSize="30" x:Name="noteList" Grid.Row="1" Background="#414141" BorderThickness="0" SelectionChanged="noteList_SelectionChanged">
+                    <ListViewItem HorizontalAlignment="Center">A</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">A#</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">B</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">C</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">C#</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">D</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">D#</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">E</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">F</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">F#</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">G</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">G#</ListViewItem>
+                </ListView>
+
+            </Grid>
+            <Grid Grid.Column="1" Margin="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" x:Name="typeListUpButton" Click="typeListUpButton_Click" Content="▲" FontFamily="Rubik" Background="#F9D100"/>
+                <Button Grid.Row="2" x:Name="typeListDownButton" Click="typeListDownButton_Click" Content="▼"  FontFamily="Rubik" Background="#F9D100"/>
+                <ListView SelectionChanged="noteList_SelectionChanged" Foreground="White" FontFamily="Rubik" ScrollViewer.VerticalScrollBarVisibility="Hidden" FontSize="30" x:Name="typeChordList" Grid.Row="1" Background="#414141" BorderThickness="0">
+                    <ListViewItem HorizontalAlignment="Center">major</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">m</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">5</ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center">7</ListViewItem>
+                </ListView>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="nameNoteLabel" Content="Аккорд" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik" FontSize="30"/>
+            <Image x:Name="AplicatureImage" Grid.Row="1" Margin="10" Height="350" Width="260"/>
+            <Button Grid.Row="2" Margin="10" x:Name="listenButton" Content="Прослушать"  FontFamily="Rubik" Background="#F9D100"/>
+        </Grid>
+    </Grid>
+
+</Page>

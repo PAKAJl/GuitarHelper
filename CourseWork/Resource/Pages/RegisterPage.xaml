@@ -15,6 +15,7 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Логин" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
@@ -22,5 +23,6 @@
         <Label Grid.Row="2" Content="Пароль" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
         <TextBox Grid.Row="3" x:Name="passwordTextBox" Height="25" Width="200" VerticalAlignment="Top"/>
         <Button Grid.Row="4" Click="signUpButton_Click" x:Name="signUpButton" Content="Зарегистрироваться" Width="200" Height="50" VerticalAlignment="Top" FontFamily="Rubik" Background="#F9D100"/>
+        <Label Content="" x:Name="recoveryLabel" Grid.Row="5" Margin="10" Foreground="White" FontSize="20" FontFamily="Rubik" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

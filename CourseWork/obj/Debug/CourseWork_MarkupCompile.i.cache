@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\учеба\CourseWork\CourseWork\CourseWork\App.xaml
-91012142010
+11448862337
 2-145878106
-241676513889
+26-166831526
 26880997972
-MainWindow.xaml;Resource\Pages\AddSongPage.xaml;Resource\Pages\ChordsPage.xaml;Resource\Pages\LessonsPage.xaml;Resource\Pages\LoginPage.xaml;Resource\Pages\ProfilePage.xaml;Resource\Pages\RegisterPage.xaml;Resource\Pages\TunnerPage.xaml;Resource\UI\Tuners\GuitarTuner.xaml;
+MainWindow.xaml;Resource\Pages\AddSongPage.xaml;Resource\Pages\ApplicaturePage.xaml;Resource\Pages\ChordsPage.xaml;Resource\Pages\LessonsPage.xaml;Resource\Pages\LoginPage.xaml;Resource\Pages\ProfilePage.xaml;Resource\Pages\RecoveryPage.xaml;Resource\Pages\RegisterPage.xaml;Resource\Pages\TunnerPage.xaml;Resource\UI\Tuners\GuitarTuner.xaml;
 
 True
 

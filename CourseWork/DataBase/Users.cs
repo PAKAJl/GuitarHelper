@@ -20,5 +20,6 @@ namespace CourseWork.DataBase
         public string Avatar { get; set; }
         public string FavoritesSongs { get; set; }
         public Nullable<int> TimeInApp { get; set; }
+        public string RecoveryCode { get; set; }
     }
 }

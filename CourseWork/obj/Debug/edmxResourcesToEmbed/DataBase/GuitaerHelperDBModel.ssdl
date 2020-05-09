@@ -18,6 +18,7 @@
     <Property Name="Avatar" Type="nvarchar(max)" />
     <Property Name="FavoritesSongs" Type="nvarchar(max)" />
     <Property Name="TimeInApp" Type="int" />
+    <Property Name="RecoveryCode" Type="nvarchar(max)" />
   </EntityType>
   <EntityContainer Name="Хранилище GuitarHelperDBModelContainer">
     <EntitySet Name="Songs" EntityType="Self.Songs" Schema="dbo" store:Type="Tables" />

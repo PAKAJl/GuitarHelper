@@ -22,5 +22,6 @@
     <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="FavoritesSongs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="TimeInApp" Type="Int32" />
+    <Property Name="RecoveryCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

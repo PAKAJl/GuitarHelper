@@ -110,13 +110,17 @@ namespace CourseWork.DataBase
             return result;
         }
 
-        public bool SingUp(string login, string password)
+        public bool SingUp(string login, string password, ref string recoveryCode)
         {
+            Random rand = new Random();
             Users newUser = new Users();
             newUser.Login = login;
             newUser.Password = GetHash(password);
             newUser.Avatar = @"NoAvatar.png";
             newUser.TimeInApp = 0;
+            newUser.FavoritesSongs = (0).ToString();
+            recoveryCode = rand.Next(10000, 99999).ToString();
+            newUser.RecoveryCode = GetHash(recoveryCode.ToString());
             using (mainConnectedDB context = new mainConnectedDB())
             {
                 foreach (var user in context.Users)
@@ -131,7 +135,6 @@ namespace CourseWork.DataBase
                 context.SaveChanges();
                 MessageBox.Show("Пользователь успешно зарегистрирован!");
                 return true;
-
             }
         }
 
@@ -148,6 +151,27 @@ namespace CourseWork.DataBase
                 }
             }
             return "";
+        }
+
+        public bool RecoveryPass(string login, string recoveryCode, string newPass)
+        {
+            bool result = false;
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
+                if (GetHash(recoveryCode) == userInfo.RecoveryCode)
+                {
+                    MessageBox.Show("Пароль успешно изменен");
+                    userInfo.Password = GetHash(newPass);
+                }
+                else
+                {
+                    result = false;
+                    MessageBox.Show("Не верный кол воостановления, поворите попытку!");
+                }
+                context.SaveChanges();
+            }
+            return result;
         }
 
         public void UpdateUserLogin(string oldName, string newName)

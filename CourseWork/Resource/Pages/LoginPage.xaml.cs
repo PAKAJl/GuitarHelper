@@ -45,7 +45,13 @@ namespace CourseWork.Resource.Pages
                 Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
                 mWindow.avatarImage.ImageSource = new BitmapImage(imageUri);
                 mWindow.TimerT();
+                mWindow.logButton.Content = "Выйти";
             }
+        }
+
+        private void toRecovery_Click(object sender, RoutedEventArgs e)
+        {
+            mWindow.Frames.Navigate(new RecoveryPage(mWindow));
         }
     }
 }

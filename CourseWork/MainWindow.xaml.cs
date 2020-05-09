@@ -40,11 +40,12 @@ namespace CourseWork
         {
             InitializeComponent();
             
-            checkOnClick = new bool[3];
-            buttonsList = new Button[3];
+            checkOnClick = new bool[4];
+            buttonsList = new Button[4];
             buttonsList[0] = TunnerButton;
             buttonsList[1] = LessonButton;
             buttonsList[2] = ChordsButton;
+            buttonsList[3] = AplicatureButton;
             for (int i = 0; i < checkOnClick.Length; i++)
             {
                 checkOnClick[i] = false;
@@ -53,7 +54,7 @@ namespace CourseWork
             string imagePath = $"../../Resource/Pictures/Avatars/NoAvatar.png";
             Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
             avatarImage.ImageSource = new BitmapImage(imageUri);
-            
+            logButton.Content = "Войти";
         }
         
         
@@ -108,6 +109,31 @@ namespace CourseWork
                 connection.UpdateTimeInApp(timeInSessoin, accountName.Content.ToString());
             }
             timerInApp.Stop();
+        }
+
+        private void AplicatureButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonAccsess(3);
+            Frames.Navigate(new Resource.Pages.ApplicaturePage(this));
+        }
+
+        private void logButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (logButton.Content.ToString() == "Войти")
+            {
+                Frames.Navigate(new Resource.Pages.LoginPage(this));
+            }
+            else
+            {
+                connection.UpdateTimeInApp(timeInSessoin, accountName.Content.ToString());
+                timerInApp.Stop();
+                string imagePath = $"../../Resource/Pictures/Avatars/NoAvatar.png";
+                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+                avatarImage.ImageSource = new BitmapImage(imageUri);
+                accountName.Content = "Гость";
+                Frames.Navigate(new Resource.Pages.LoginPage(this));
+            }   
+               
         }
     }
 }

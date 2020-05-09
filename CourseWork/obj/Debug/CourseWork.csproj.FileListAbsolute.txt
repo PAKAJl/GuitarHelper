@@ -80,3 +80,7 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csprojAssemblyReference.cache
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.baml
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ApplicaturePage.g.cs
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ApplicaturePage.baml
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.g.cs
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.baml

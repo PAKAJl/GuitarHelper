@@ -23,6 +23,7 @@
           <Property Name="Avatar" Type="nvarchar(max)" />
           <Property Name="FavoritesSongs" Type="nvarchar(max)" />
           <Property Name="TimeInApp" Type="int" />
+          <Property Name="RecoveryCode" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="Хранилище GuitarHelperDBModelContainer">
           <EntitySet Name="Songs" EntityType="Self.Songs" Schema="dbo" store:Type="Tables" />
@@ -54,6 +55,7 @@
           <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FavoritesSongs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TimeInApp" Type="Int32" />
+          <Property Name="RecoveryCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -73,6 +75,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="GuitarHelperDBModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="RecoveryCode" ColumnName="RecoveryCode" />
                 <ScalarProperty Name="TimeInApp" ColumnName="TimeInApp" />
                 <ScalarProperty Name="FavoritesSongs" ColumnName="FavoritesSongs" />
                 <ScalarProperty Name="Avatar" ColumnName="Avatar" />

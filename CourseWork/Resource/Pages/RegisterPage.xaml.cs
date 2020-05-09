@@ -32,10 +32,11 @@ namespace CourseWork.Resource.Pages
 
         private void signUpButton_Click(object sender, RoutedEventArgs e)
         {
-            bool success = connection.SingUp(loginTextBox.Text,passwordTextBox.Text);
+            string recovery = "";
+            bool success = connection.SingUp(loginTextBox.Text,passwordTextBox.Text,ref recovery);
             if (success)
             {
-                mWindow.Frames.Navigate(new LoginPage(mWindow));
+                recoveryLabel.Content = "Код для восстановления: "+recovery;
             }
         }
     }
