@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Data.Entity;
+using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace CourseWork.DataBase
 {
@@ -118,7 +120,7 @@ namespace CourseWork.DataBase
             newUser.Password = GetHash(password);
             newUser.Avatar = @"NoAvatar.png";
             newUser.TimeInApp = 0;
-            newUser.FavoritesSongs = (0).ToString();
+            newUser.FavoritesSongs = "";
             recoveryCode = rand.Next(10000, 99999).ToString();
             newUser.RecoveryCode = GetHash(recoveryCode.ToString());
             using (mainConnectedDB context = new mainConnectedDB())
@@ -232,6 +234,86 @@ namespace CourseWork.DataBase
                 }
             }
             return "";
+        }
+        
+        public void AddInFavorite(string login, string nameSong)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
+                var newSong = context.Songs.SingleOrDefault(song => song.Name == nameSong);
+                userInfo.FavoritesSongs += $"{newSong.SongID} ";
+                context.SaveChanges();
+            }
+        }
+
+        public void DeleteFromFavorite(string login, string nameSong)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
+                var curentSong = context.Songs.SingleOrDefault(song => song.Name == nameSong);
+                List<int> favoritesSongs = GetFavoriteSongList(login);
+                favoritesSongs.Remove(curentSong.SongID);
+                string favInDB = "";
+                foreach (var songId in favoritesSongs)
+                {
+                    favInDB += songId + " ";
+                }
+                userInfo.FavoritesSongs = favInDB;
+                context.SaveChanges();
+            }
+        }
+
+        public List<int> GetFavoriteSongList(string login)
+        {
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
+                int[] songsArray = userInfo.FavoritesSongs.Trim().Split(' ').Select(x => int.Parse(x)).ToArray();
+                return songsArray.ToList();
+            }
+        }
+
+        public Dictionary<string,string> SelectFavoriteSong(string login)
+        {
+            List<int> favoritesSongsId = GetFavoriteSongList(login);
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                foreach (var songId in favoritesSongsId)
+                {
+                    foreach (var song in context.Songs)
+                    {
+                        if (song.SongID == songId)
+                        {
+                            result.Add(song.Name, song.Text);
+                        }
+                    }
+                }
+               
+            }
+            return result;
+        }
+
+        public bool CheckOnFavorite(string login, string checkSong)
+        {
+            bool result = false;
+            using (mainConnectedDB context = new mainConnectedDB())
+            {
+                var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
+                var curentSong = context.Songs.SingleOrDefault(song => song.Name == checkSong);
+                List<int> favoriteSongList = GetFavoriteSongList(login);
+                foreach (var songId in favoriteSongList)
+                {
+                    if (curentSong.SongID == songId)
+                    {
+                        result = true;
+                        break;
+                    }
+                }
+            }
+            return result;
         }
     }
 }

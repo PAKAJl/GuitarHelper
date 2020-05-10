@@ -17,7 +17,7 @@
             <RowDefinition/>
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
-        <Button x:Name="favoriteButton" Content="Избранное" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
+        <Button x:Name="favoriteButton" Click="favoriteButton_Click" Content="Избранное" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
         <ListBox x:Name="songListBox" Margin="10" Grid.Row="1" SelectionChanged="songListBox_SelectionChanged"/>
         <Grid Width="200" Margin="50 10" Grid.Column="1" HorizontalAlignment="Left">
             <Grid.ColumnDefinitions>
