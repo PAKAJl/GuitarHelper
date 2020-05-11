@@ -84,3 +84,5 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Applicat
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ApplicaturePage.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.baml
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.g.cs
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.baml

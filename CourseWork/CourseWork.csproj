@@ -125,6 +125,9 @@
     <Compile Include="Resource\Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resource\Pages\RecorderPage.xaml.cs">
+      <DependentUpon>RecorderPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resource\Pages\RecoveryPage.xaml.cs">
       <DependentUpon>RecoveryPage.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resource\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\RecorderPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -244,6 +251,8 @@
       <DependentUpon>GuitaerHelperDBModel.edmx</DependentUpon>
       <LastGenOutput>GuitaerHelperDBModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resource\Pictures\Record.png" />
+    <Resource Include="Resource\Pictures\Unrecord.png" />
     <Resource Include="Resource\Pictures\Aplicatures\A.jpg" />
     <Resource Include="Resource\Pictures\Aplicatures\A5.jpg" />
     <Resource Include="Resource\Pictures\Aplicatures\A7.jpg" />

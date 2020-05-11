@@ -139,6 +139,19 @@
                     <Button Grid.Column="2" x:Name="AplicatureButton" Content="Аккорды" FontFamily="Rubik" Foreground="White"  Background="#323232" Style="{DynamicResource AsideButtons}" Height="50" VerticalAlignment="Top" Click="AplicatureButton_Click"></Button>
                 </Grid>
                 <!--Кнопочка-->
+
+                <!--Кнопочка-->
+                <Grid Margin="0 0 0 20" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Column="0" Fill="#F9D100"/>
+                    <Rectangle Grid.Column="1" Fill="#7B7D00"/>
+                    <Button Grid.Column="2" x:Name="RecorderButton" Content="Диктофон" FontFamily="Rubik" Foreground="White"  Background="#323232" Style="{DynamicResource AsideButtons}" Height="50" VerticalAlignment="Top" Click="RecorderButton_Click"></Button>
+                </Grid>
+                <!--Кнопочка-->
             </StackPanel>
             <!--Кнопочки-->
             <Button x:Name="logButton" Click="logButton_Click" Margin="10" Content="Войти" Foreground="White" Height="40" VerticalAlignment="Bottom" FontFamily="Rubik" Background="#323232" Style="{DynamicResource AsideButtons}"/>

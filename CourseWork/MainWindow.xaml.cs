@@ -40,12 +40,13 @@ namespace CourseWork
         {
             InitializeComponent();
             
-            checkOnClick = new bool[4];
-            buttonsList = new Button[4];
+            checkOnClick = new bool[5];
+            buttonsList = new Button[5];
             buttonsList[0] = TunnerButton;
             buttonsList[1] = LessonButton;
             buttonsList[2] = ChordsButton;
             buttonsList[3] = AplicatureButton;
+            buttonsList[4] = RecorderButton;
             for (int i = 0; i < checkOnClick.Length; i++)
             {
                 checkOnClick[i] = false;
@@ -134,6 +135,12 @@ namespace CourseWork
                 Frames.Navigate(new Resource.Pages.LoginPage(this));
             }   
                
+        }
+
+        private void RecorderButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonAccsess(4);
+            Frames.Navigate(new Resource.Pages.RecorderPage(this));
         }
     }
 }
