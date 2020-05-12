@@ -70,16 +70,18 @@
             <Grid  HorizontalAlignment="Right" Margin="20 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="40"/>
                     <ColumnDefinition Width="120"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" x:Name="toProfileButton" Click="toProfileButton_Click" Margin="10" Content="Профиль" Height="50" VerticalAlignment="Center" FontFamily="Rubik" Background="#FFf9b000" Style="{DynamicResource AsideButtons}"/>
-                <Ellipse Grid.Column="1" Height="40">
+                <Button Grid.Row="1" Grid.Column="1" x:Name="toProfileButton" Click="toProfileButton_Click" Margin="10" Content="Профиль" Height="50" VerticalAlignment="Center" FontFamily="Rubik" Background="#FFf9b000" Style="{DynamicResource AsideButtons}"/>
+                <Button Grid.Row="1" Grid.Column="0" x:Name="metronomeButton" Click="metronomeButton_Click" Margin="10" Content="Метроном" Height="50" VerticalAlignment="Center" FontFamily="Rubik" Background="#FFf9b000" Style="{DynamicResource AsideButtons}"/>
+                <Ellipse Grid.Column="2" Height="40">
                     <Ellipse.Fill>
                         <ImageBrush x:Name="avatarImage"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Label Grid.Column="2" x:Name="accountName" Content="Гость" FontFamily="Rubik" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0"/>
+                <Label Grid.Column="3" x:Name="accountName" Content="Гость" FontFamily="Rubik" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0"/>
             </Grid>
             <Grid Grid.Row="1" Background="#7B7D00"></Grid>
         </Grid>

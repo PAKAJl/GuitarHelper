@@ -1,0 +1,52 @@
+﻿<Window x:Class="CourseWork.Windows.MetronomeWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Windows"
+        mc:Ignorable="d"
+        Title="Метроном" Height="355.639" Width="619.59"
+        Background="#525252">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label Content="Ударов в минуту" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
+                <Grid Height="60">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="minusTickButton" Click="minusTickButton_Click" Width="40" Content="⮜" FontSize="30" HorizontalAlignment="Right" FontFamily="Rubik" Background="#F9D100"/>
+                    <Button Grid.Column="2" x:Name="plusTickButton" Width="40" Click="plusTickButton_Click" Content="⮞" FontSize="30" HorizontalAlignment="Left" FontFamily="Rubik" Background="#F9D100"/>
+                    <TextBox x:Name="beatsInMinBox" Text="60" Grid.Column="1" FontSize="40" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Label Content="Долей в такте" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
+                <Grid Height="60">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="minusTackButton" Click="minusTackButton_Click" Width="40" Content="⮜" FontSize="30" HorizontalAlignment="Right" FontFamily="Rubik" Background="#F9D100"/>
+                    <Button Grid.Column="2" x:Name="plusTackButton" Click="plusTackButton_Click" Width="40" Content="⮞" FontSize="30" HorizontalAlignment="Left" FontFamily="Rubik" Background="#F9D100"/>
+                    <TextBox x:Name="ticksInTackBox" Text="4" Grid.Column="1" FontSize="40" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1" x:Name="indicators" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        </StackPanel>
+        <Button Grid.Row="2" Width="130" Height="50" x:Name="startButton" Click="startButton_Click" Content="Запустить" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Rubik" Background="#F9D100"/>
+    </Grid>
+</Window>

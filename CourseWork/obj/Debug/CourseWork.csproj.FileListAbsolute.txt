@@ -86,3 +86,5 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Recovery
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.baml
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.g.cs
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.baml

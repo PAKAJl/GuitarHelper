@@ -1,4 +1,5 @@
 ﻿using CourseWork.DataBase;
+using CourseWork.Windows;
 using NAudio.Wave;
 using System;
 using System.Collections.Generic;
@@ -141,6 +142,12 @@ namespace CourseWork
         {
             ButtonAccsess(4);
             Frames.Navigate(new Resource.Pages.RecorderPage(this));
+        }
+
+        private void metronomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            MetronomeWin mertonome = new MetronomeWin();
+            mertonome.Show();
         }
     }
 }

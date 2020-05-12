@@ -140,6 +140,9 @@
     <Compile Include="Resource\UI\Tuners\GuitarTuner.xaml.cs">
       <DependentUpon>GuitarTuner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\MetronomeWin.xaml.cs">
+      <DependentUpon>MetronomeWin.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -196,6 +199,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\MetronomeWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -235,7 +242,6 @@
   <ItemGroup>
     <Folder Include="Resource\Lib\Classes\IInterfaces\" />
     <Folder Include="Resource\Lib\Librares\" />
-    <Folder Include="Windows\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -251,6 +257,8 @@
       <DependentUpon>GuitaerHelperDBModel.edmx</DependentUpon>
       <LastGenOutput>GuitaerHelperDBModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Resource\Sounds\HighTick.wav" />
+    <Content Include="Resource\Sounds\LowTick.wav" />
     <Resource Include="Resource\Pictures\Record.png" />
     <Resource Include="Resource\Pictures\Unrecord.png" />
     <Resource Include="Resource\Pictures\Aplicatures\A.jpg" />

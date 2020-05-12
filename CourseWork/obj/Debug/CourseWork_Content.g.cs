@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitaerhelperdbmodel.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitaerhelperdbmodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/sounds/hightick.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/sounds/lowtick.wav")]
 
 
