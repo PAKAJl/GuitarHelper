@@ -130,5 +130,51 @@ namespace CourseWork.Windows
         {
             ticksInTackBox.Text = $"{int.Parse(ticksInTackBox.Text) - 1}";
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            metronome.Stop();
+        }
+
+        private void beatsInMinBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (int.Parse(beatsInMinBox.Text) < 30)
+                {
+                    beatsInMinBox.Text = "30";
+                }
+                if (int.Parse(beatsInMinBox.Text) > 180)
+                {
+                    beatsInMinBox.Text = "180";
+                }
+            }
+            catch (Exception ex)
+            {
+                beatsInMinBox.Text = "30";
+            }
+                
+
+        }
+
+        private void ticksInTackBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (int.Parse(ticksInTackBox.Text) < 3)
+                {
+                    ticksInTackBox.Text = "3";
+                }
+                if (int.Parse(ticksInTackBox.Text) > 10)
+                {
+                    ticksInTackBox.Text = "10";
+                }
+            }
+            catch (Exception ex)
+            {
+                ticksInTackBox.Text = "3";
+            }
+
+        }
     }
 }

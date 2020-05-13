@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CourseWork.Windows"
         mc:Ignorable="d"
         Title="Метроном" Height="355.639" Width="619.59"
-        Background="#525252">
+        Background="#525252" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -28,7 +28,7 @@
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" x:Name="minusTickButton" Click="minusTickButton_Click" Width="40" Content="⮜" FontSize="30" HorizontalAlignment="Right" FontFamily="Rubik" Background="#F9D100"/>
                     <Button Grid.Column="2" x:Name="plusTickButton" Width="40" Click="plusTickButton_Click" Content="⮞" FontSize="30" HorizontalAlignment="Left" FontFamily="Rubik" Background="#F9D100"/>
-                    <TextBox x:Name="beatsInMinBox" Text="60" Grid.Column="1" FontSize="40" HorizontalContentAlignment="Center"/>
+                    <TextBox x:Name="beatsInMinBox" Text="60" Grid.Column="1" FontSize="40" HorizontalContentAlignment="Center" LostFocus="beatsInMinBox_LostFocus"/>
                 </Grid>
             </StackPanel>
             <StackPanel Grid.Column="1">
@@ -41,7 +41,7 @@
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" x:Name="minusTackButton" Click="minusTackButton_Click" Width="40" Content="⮜" FontSize="30" HorizontalAlignment="Right" FontFamily="Rubik" Background="#F9D100"/>
                     <Button Grid.Column="2" x:Name="plusTackButton" Click="plusTackButton_Click" Width="40" Content="⮞" FontSize="30" HorizontalAlignment="Left" FontFamily="Rubik" Background="#F9D100"/>
-                    <TextBox x:Name="ticksInTackBox" Text="4" Grid.Column="1" FontSize="40" HorizontalContentAlignment="Center"/>
+                    <TextBox x:Name="ticksInTackBox" Text="4" Grid.Column="1" FontSize="40" HorizontalContentAlignment="Center" LostFocus="ticksInTackBox_LostFocus"/>
                 </Grid>
             </StackPanel>
         </Grid>
