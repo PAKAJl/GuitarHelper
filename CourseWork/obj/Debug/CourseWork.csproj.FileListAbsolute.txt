@@ -55,9 +55,7 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsP
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LoginPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RegisterPage.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.g.cs
-E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\UI\Tuners\GuitarTuner.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork_Content.g.cs
-E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork_MarkupCompile.cache
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork_MarkupCompile.lref
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.baml
@@ -66,7 +64,6 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsP
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LoginPage.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RegisterPage.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.baml
-E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\UI\Tuners\GuitarTuner.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.g.resources
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.Properties.Resources.resources
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.GenerateResource.cache
@@ -87,3 +84,8 @@ E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Recorder
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.baml
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.g.cs
 E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.baml
+E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\DataBase\GuitarHelperDB.mdf
+E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\DataBase\GuitarHelperDB_log.ldf
+E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelperDB.mdf
+E:\учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelperDB_log.ldf
+E:\учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csprojAssemblyReference.cache

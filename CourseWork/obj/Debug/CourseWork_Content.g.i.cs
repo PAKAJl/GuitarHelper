@@ -8,8 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitaerhelperdbmodel.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitaerhelperdbmodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitarhelperdb.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitarhelperdbmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitarhelperdbmodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/guitarhelperdb_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("guitarhelperdb.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("guitarhelperdb_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/sounds/hightick.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/sounds/lowtick.wav")]
 

@@ -19,7 +19,7 @@ namespace CourseWork.DataBase
         public void SelectSongs()
         {
             songsList = new Dictionary<string, string>();
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var song in context.Songs)
                 {
@@ -32,7 +32,7 @@ namespace CourseWork.DataBase
 
         public void DeleteSong(string name)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 Songs song = context.Songs.Where(s => s.Name == name).FirstOrDefault();
                 context.Songs.Remove(song);
@@ -46,7 +46,7 @@ namespace CourseWork.DataBase
             Songs newSong = new Songs();
             newSong.Name = name;
             newSong.Text = text;
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 context.Songs.Add(newSong);
                 context.SaveChanges();
@@ -64,7 +64,7 @@ namespace CourseWork.DataBase
         public async Task<bool> SignIn(string login, string password)
         {
             bool result = false;
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 await context.Users.ForEachAsync(user =>
                 {
@@ -88,7 +88,7 @@ namespace CourseWork.DataBase
 
         public void UpdateTimeInApp(int time, string login)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
                 userInfo.TimeInApp += time;
@@ -99,7 +99,7 @@ namespace CourseWork.DataBase
         public async Task<int> GetTimeInApp(string login)
         {
             int result = 0;
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 await context.Users.ForEachAsync(user =>
                 {
@@ -123,7 +123,7 @@ namespace CourseWork.DataBase
             newUser.FavoritesSongs = "";
             recoveryCode = rand.Next(10000, 99999).ToString();
             newUser.RecoveryCode = GetHash(recoveryCode.ToString());
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var user in context.Users)
                 {
@@ -142,7 +142,7 @@ namespace CourseWork.DataBase
 
         public string GetAvatar(string login)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var user in context.Users)
                 {
@@ -158,7 +158,7 @@ namespace CourseWork.DataBase
         public bool RecoveryPass(string login, string recoveryCode, string newPass)
         {
             bool result = false;
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
                 if (GetHash(recoveryCode) == userInfo.RecoveryCode)
@@ -178,7 +178,7 @@ namespace CourseWork.DataBase
 
         public void UpdateUserLogin(string oldName, string newName)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var user in context.Users)
                 {
@@ -193,7 +193,7 @@ namespace CourseWork.DataBase
 
         public void UpdateUserPass(string oldName, string newPass)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var user in context.Users)
                 {
@@ -208,7 +208,7 @@ namespace CourseWork.DataBase
 
         public void UpdateUserAvatar(string oldName, string newAvatar)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var user in context.Users)
                 {
@@ -223,7 +223,7 @@ namespace CourseWork.DataBase
 
         public string GetPass(string login)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var user in context.Users)
                 {
@@ -238,7 +238,7 @@ namespace CourseWork.DataBase
         
         public void AddInFavorite(string login, string nameSong)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
                 var newSong = context.Songs.SingleOrDefault(song => song.Name == nameSong);
@@ -249,7 +249,7 @@ namespace CourseWork.DataBase
 
         public void DeleteFromFavorite(string login, string nameSong)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
                 var curentSong = context.Songs.SingleOrDefault(song => song.Name == nameSong);
@@ -267,7 +267,7 @@ namespace CourseWork.DataBase
 
         public List<int> GetFavoriteSongList(string login)
         {
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
                 int[] songsArray = userInfo.FavoritesSongs.Trim().Split(' ').Select(x => int.Parse(x)).ToArray();
@@ -279,7 +279,7 @@ namespace CourseWork.DataBase
         {
             List<int> favoritesSongsId = GetFavoriteSongList(login);
             Dictionary<string, string> result = new Dictionary<string, string>();
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 foreach (var songId in favoritesSongsId)
                 {
@@ -299,7 +299,7 @@ namespace CourseWork.DataBase
         public bool CheckOnFavorite(string login, string checkSong)
         {
             bool result = false;
-            using (mainConnectedDB context = new mainConnectedDB())
+            using (GuitarHelperDBContext context = new GuitarHelperDBContext())
             {
                 var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
                 var curentSong = context.Songs.SingleOrDefault(song => song.Name == checkSong);
