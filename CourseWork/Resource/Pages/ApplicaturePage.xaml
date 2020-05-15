@@ -71,7 +71,7 @@
             </Grid.RowDefinitions>
             <Label x:Name="nameNoteLabel" Content="Аккорд" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik" FontSize="30"/>
             <Image x:Name="AplicatureImage" Grid.Row="1" Margin="10" Height="350" Width="260"/>
-            <Button Grid.Row="2" Margin="10" x:Name="listenButton" Content="Прослушать"  FontFamily="Rubik" Background="#F9D100"/>
+            <Button Grid.Row="2" Margin="10" x:Name="listenButton" Click="listenButton_Click" Content="Прослушать"  FontFamily="Rubik" Background="#F9D100"/>
         </Grid>
     </Grid>
 

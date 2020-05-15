@@ -1,6 +1,8 @@
-﻿using System;
+﻿using NAudio.Wave;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +26,8 @@ namespace CourseWork.Resource.Pages
         private string[] chordList = new string[] {"A","Adiez","B","C","Cdiez","D","Ddiez","E","F","Fdiez","G","Gdiez" };
         private string[] chordList1 = new string[] { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
         private string[] typeList = new string[] {"","m","5","7"};
+        SoundPlayer chordSound = new SoundPlayer();
+        WaveOut outputSound = new WaveOut();
         public ApplicaturePage(MainWindow mainWindow)
         {
             InitializeComponent();
@@ -98,6 +102,21 @@ namespace CourseWork.Resource.Pages
             {
 
             }
+        }
+
+        private void listenButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string noteName = $@"{chordList[noteList.SelectedIndex]}{typeList[typeChordList.SelectedIndex]}";
+                chordSound = new SoundPlayer($@"../../Resource/Sounds/Chords/{noteName}.wav");
+                chordSound.Play();
+            }
+            catch (Exception ex)
+            {
+
+            }
+           
         }
     }
 }

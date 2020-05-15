@@ -251,7 +251,6 @@
     <Folder Include="Resource\Lib\Classes\IInterfaces\" />
     <Folder Include="Resource\Lib\Librares\" />
     <Folder Include="Resource\Pages\Lessons\" />
-    <Folder Include="Resource\Sounds\Chords\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -281,6 +280,54 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GuitarHelperDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Resource\Sounds\Chords\A.wav" />
+    <Content Include="Resource\Sounds\Chords\A5.wav" />
+    <Content Include="Resource\Sounds\Chords\A7.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Am.wav" />
+    <Content Include="Resource\Sounds\Chords\B.wav" />
+    <Content Include="Resource\Sounds\Chords\B5.wav" />
+    <Content Include="Resource\Sounds\Chords\B7.wav" />
+    <Content Include="Resource\Sounds\Chords\Bm.wav" />
+    <Content Include="Resource\Sounds\Chords\C.wav" />
+    <Content Include="Resource\Sounds\Chords\C5.wav" />
+    <Content Include="Resource\Sounds\Chords\C7.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Cm.wav" />
+    <Content Include="Resource\Sounds\Chords\D.wav" />
+    <Content Include="Resource\Sounds\Chords\D5.wav" />
+    <Content Include="Resource\Sounds\Chords\D7.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Dm.wav" />
+    <Content Include="Resource\Sounds\Chords\E.wav" />
+    <Content Include="Resource\Sounds\Chords\E5.wav" />
+    <Content Include="Resource\Sounds\Chords\E7.wav" />
+    <Content Include="Resource\Sounds\Chords\Em.wav" />
+    <Content Include="Resource\Sounds\Chords\F.wav" />
+    <Content Include="Resource\Sounds\Chords\F5.wav" />
+    <Content Include="Resource\Sounds\Chords\F7.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Fm.wav" />
+    <Content Include="Resource\Sounds\Chords\G.wav" />
+    <Content Include="Resource\Sounds\Chords\G5.wav" />
+    <Content Include="Resource\Sounds\Chords\G7.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Gm.wav" />
     <Content Include="Resource\Sounds\HighTick.wav" />
     <Content Include="Resource\Sounds\LowTick.wav" />
     <Resource Include="Resource\Pictures\Record.png" />
