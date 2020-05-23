@@ -90,7 +90,7 @@ namespace CourseWork
         private void LessonButton_Click(object sender, RoutedEventArgs e)
         {
             ButtonAccsess(1);
-            Frames.Navigate(new Resource.Pages.LessonsPage());
+            Frames.Navigate(new Resource.Pages.LessonsPage(this));
         }
 
         private void ChordsButton_Click(object sender, RoutedEventArgs e)

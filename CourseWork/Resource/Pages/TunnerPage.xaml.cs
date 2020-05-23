@@ -30,6 +30,7 @@ namespace CourseWork.Resource.Pages
         bool recordStatus = false;
         private int inputDevice = 0;
         private DispatcherTimer timerFrame = new DispatcherTimer();
+        Border[] indicat = new Border[11];
 
 
         Dictionary<string, double> noteBaseFreqs = new Dictionary<string, double>()
@@ -50,17 +51,137 @@ namespace CourseWork.Resource.Pages
             inputDevice = index;
         }
 
+
         public TunnerPage()
         {
             InitializeComponent();
             ScanSoundCards();
+            sound = new Sound();
+            indicat = FillIndicators();
+            foreach (var item in indicat)
+            {
+                indicators.Children.Add(item);
+            }
         }
+
+        private Border[] FillIndicators()
+        {
+            Thickness thickness = new Thickness();
+            thickness.Left = 0;
+            thickness.Left = 0;
+            thickness.Left = 0;
+            thickness.Left = 0;
+
+
+            Border[] ind = new Border[11];
+            for (int i = 0; i < ind.Length; i++)
+            {
+                if (i == 0)
+                {
+                    CornerRadius cornerRadius = new CornerRadius();
+                    cornerRadius.TopLeft = 3;
+                    cornerRadius.TopRight = 0;
+                    cornerRadius.BottomRight = 0;
+                    cornerRadius.BottomLeft = 3;
+                    ind[i] = new Border
+                    {
+                        Opacity = 0.5,
+                        Height = 40,
+                        Width = 20,
+                        BorderThickness = thickness,
+                        Background = Brushes.Red,
+                    };
+                }
+                else if (i == 10)
+                {
+                    CornerRadius cornerRadius = new CornerRadius();
+                    cornerRadius.TopLeft = 0;
+                    cornerRadius.TopRight = 3;
+                    cornerRadius.BottomRight = 3;
+                    cornerRadius.BottomLeft = 0;
+                    ind[i] = new Border
+                    {
+                        Opacity = 0.5,
+                        Height = 40,
+                        Width = 20,
+                        BorderThickness = thickness,
+                        Background = Brushes.Red,
+                    };
+                }
+                else
+                {
+                    CornerRadius cornerRadius = new CornerRadius();
+                    cornerRadius.TopLeft = 0;
+                    cornerRadius.TopRight = 0;
+                    cornerRadius.BottomRight = 0;
+                    cornerRadius.BottomLeft = 0;
+                    if ((i == 1) || (i == 9))
+                    {
+                        ind[i] = new Border
+                        {
+                            Opacity = 0.5,
+                            Height = 40,
+                            Width = 20,
+                            BorderThickness = thickness,
+                            Background = Brushes.OrangeRed,
+                        };
+                    }
+                    if ((i == 2) || (i == 8))
+                    {
+                        ind[i] = new Border
+                        {
+                            Opacity = 0.5,
+                            Height = 40,
+                            Width = 20,
+                            BorderThickness = thickness,
+                            Background = Brushes.Orange
+                        };
+                    }
+                    if ((i == 3) || (i == 7))
+                    {
+                        ind[i] = new Border
+                        {
+                            Opacity = 0.5,
+                            Height = 40,
+                            Width = 20,
+                            BorderThickness = thickness,
+                            Background = Brushes.Yellow
+                        };
+                    }
+                    if ((i == 4) || (i == 6))
+                    {
+                        ind[i] = new Border
+                        {
+                            Opacity = 0.5,
+                            Height = 40,
+                            Width = 20,
+                            BorderThickness = thickness,
+                            Background = Brushes.YellowGreen
+                        };
+                    }
+                    if (i == 5)
+                    {
+                        ind[i] = new Border
+                        {
+                            Opacity = 0.5,
+                            Height = 40,
+                            Width = 20,
+                            BorderThickness = thickness,
+                            Background = Brushes.Lime
+                        };
+                    }
+
+                }
+            }
+            return ind;
+        }
+
 
         private void ScanSoundCards()
         {
             cdDevice.Items.Clear();
-            for (int i = 0; i < NAudio.Wave.WaveIn.DeviceCount; i++)
-                cdDevice.Items.Add(NAudio.Wave.WaveIn.GetCapabilities(i).ProductName);
+            for (int i = 0; i < WaveIn.DeviceCount; i++)
+                cdDevice.Items.Add(WaveIn.GetCapabilities(i).ProductName);
             if (cdDevice.Items.Count > 0)
                 cdDevice.SelectedIndex = 0;
             else
@@ -71,7 +192,6 @@ namespace CourseWork.Resource.Pages
         {
             this.Dispatcher.BeginInvoke((ThreadStart)delegate ()
             {
-
                 waveIn = new WaveInEvent();
 
                 waveIn.DeviceNumber = inputDevice;
@@ -102,7 +222,8 @@ namespace CourseWork.Resource.Pages
         string lastNote = "None";
         private void ReturnFreq()
         {
-            this.Dispatcher.BeginInvoke((ThreadStart)delegate () {
+            this.Dispatcher.BeginInvoke((ThreadStart)delegate ()
+            {
                 noteLabel.Content = GetNote(freq);
                 lastNote = noteLabel.Content.ToString();
                 freqLabel.Content = $"{freq:0.00}";
@@ -111,8 +232,17 @@ namespace CourseWork.Resource.Pages
 
         }
 
-        public string GetNote(float freq)
+        private void ClearIndicators(Border[] ind)
         {
+            for (int i = 0; i < ind.Length; i++)
+            {
+                ind[i].Opacity = 0.5;
+            }
+        }
+
+        public string GetNote(double freq)
+        {
+            ClearIndicators(indicat);
             double baseFreq;
             double[] frames = { 0, 0 };
             for (int i = 0; i < notesFreq.Length; i++)
@@ -133,37 +263,31 @@ namespace CourseWork.Resource.Pages
 
                 if ((freq > frames[0]) && (freq < frames[1]) || (freq == baseFreq))
                 {
-                    return notesName[i].ToString();
+                   
+                    double step = (frames[1] - frames[0]) / 11;
+                    double[][] indicFrames = new double[11][];
+                    double stepSum = frames[0];
+                    for (int j = 0; j < indicFrames.Length; j++)
+                    {
+                        indicFrames[j] = new double[2] { stepSum, stepSum + step };
+                        stepSum += step;
+
+                    }
+                    for (int j = 0; j < indicat.Length; j++)
+                    {
+                        if ((freq >= indicFrames[j][0]) && (freq <= indicFrames[j][1]))
+                        {
+                            indicat[j].Opacity = 1;
+
+                        }
+                    }
+                    return notesName[i - 1].ToString();
                 }
             }
-
+           
             return lastNote;
         }
 
-
-
-
-        /* public string GetNote(float freq)
-         {
-             double baseFreq;
-
-             foreach (var note in noteBaseFreqs)
-             {
-                 baseFreq = note.Value;
-
-                 for (int i = 0; i < 9; i++)
-                 {
-                     if ((freq >= baseFreq - 0.5) && (freq < baseFreq + 0.485) || (freq == baseFreq))
-                     {
-                         return note.Key + i;
-                     }
-
-                     baseFreq *= 2;
-                 }
-             }
-
-             return lastNote;
-         }*/
 
         private void StartFrame(object sender, EventArgs e)
         {

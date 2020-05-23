@@ -9,8 +9,10 @@
       Title="LessonsPage"
       Background="#525252">
 
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -18,11 +20,12 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Content="Выберите урок для ознакомления" FontSize="30" HorizontalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
-        <Button Grid.Row="1" Width="500" x:Name="lesOneButton" Content="1. Первый аккорд" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
-        <Button Grid.Row="2" Width="500" x:Name="lesTwoButton" Content="2. Первая песня" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
-        <Button Grid.Row="3" Width="500" x:Name="lesThreeButton" Content="3. Учим переборы" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
-        <Button Grid.Row="4" Width="500" x:Name="lesFourButton" Content="4. Вход идут баррэ" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
-        <Button Grid.Row="5" Width="500" x:Name="lesFiveButton" Content="5.Сложная часть" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
+        <Label Margin="10" Content="Выберите урок для ознакомления" FontSize="30" HorizontalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
+        <Button Grid.Row="1" Width="500" Click="lesOneButton_Click" x:Name="lesOneButton" Content="1. Первый аккорд" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
+        <Button Grid.Row="2" Width="500" Click="lesTwoButton_Click" x:Name="lesTwoButton" Content="2. Первая песня" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
+        <Button Grid.Row="3" Width="500" Click="lesThreeButton_Click" x:Name="lesThreeButton" Content="3. Учим переборы" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
+        <Button Grid.Row="4" Width="500" Click="lesFourButton_Click" x:Name="lesFourButton" Content="4. Вход идут баррэ" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
+        <Button Grid.Row="5" Width="500" Click="lesFiveButton_Click" x:Name="lesFiveButton" Content="5.Сложная часть" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
+        <Button Grid.Row="6" Width="500" Click="netButton_Click" x:Name="netButton" Content="Полезные интернет ресурсы" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
     </Grid>
 </Page>

@@ -7,7 +7,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TunnerPage"
       Background="#FF525252">
-      
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -18,25 +18,29 @@
                 <RowDefinition Height="170"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
                 <Label x:Name="noteLabel" Content="Note" Foreground="White" FontFamily="Rubik" HorizontalAlignment="Center" FontSize="52"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Label Content="♭" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
-                    <Border x:Name="high5NoteIndicator" Height="40" Width="20" Background="#D34001" BorderBrush="Black" BorderThickness="0" CornerRadius="3 0 0 3"/>
-                    <Border x:Name="high4NoteIndicator" Height="40" Width="20" Background="#D16312" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="high3NoteIndicator" Height="40" Width="20" Background="#A59508" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="high2NoteIndicator" Height="40" Width="20" Background="#82AB0E" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="high1NoteIndicator" Height="40" Width="20" Background="#66B039" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="idealNoteIndicator" Height="40" Width="20" Background="#258E22" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="low1NoteIndicator" Height="40" Width="20" Background="#66B039" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="low2NoteIndicator" Height="40" Width="20" Background="#82AB0E" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="low3NoteIndicator" Height="40" Width="20" Background="#A59508" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="low4NoteIndicator" Height="40" Width="20" Background="#D16312" BorderBrush="Black" BorderThickness="0" CornerRadius="0"/>
-                    <Border x:Name="low5NoteIndicator" Height="40" Width="20" Background="#D34001" BorderBrush="Black" BorderThickness="0" CornerRadius="0 3 3 0"/>
-                    <Label Content="#" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
-                </StackPanel >
-                <Label x:Name="freqLabel" Content="Freq" Foreground="White" FontFamily="Rubik" HorizontalAlignment="Center" FontSize="36"/>
-            </StackPanel>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="♭" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Center" x:Name="indicators" Orientation="Horizontal">
+                        
+                    </StackPanel>
+                    <Label Content="#" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
+                </Grid>
+
+
+                <Label x:Name="freqLabel" Grid.Row="2" Content="Freq" Foreground="White" FontFamily="Rubik" HorizontalAlignment="Center" FontSize="36"/>
+            </Grid>
             <Grid Grid.Row="1" Height="30" Width="80">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="26"/>

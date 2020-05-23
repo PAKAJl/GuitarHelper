@@ -17,6 +17,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -29,7 +30,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -134,6 +134,24 @@
     <Compile Include="Resource\Pages\LessonsPage.xaml.cs">
       <DependentUpon>LessonsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson1\Lesson1Page1.xaml.cs">
+      <DependentUpon>Lesson1Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson2\Lesson2.xaml.cs">
+      <DependentUpon>Lesson2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson3\Lesson3.xaml.cs">
+      <DependentUpon>Lesson3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson4\Lesson4.xaml.cs">
+      <DependentUpon>Lesson4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson5\Lesson5.xaml.cs">
+      <DependentUpon>Lesson5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\netResources\netResources.xaml.cs">
+      <DependentUpon>netResources.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resource\Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -180,6 +198,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resource\Pages\LessonsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson1\Lesson1Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson2\Lesson2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson3\Lesson3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson4\Lesson4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson5\Lesson5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\netResources\netResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -250,15 +292,11 @@
   <ItemGroup>
     <Folder Include="Resource\Lib\Classes\IInterfaces\" />
     <Folder Include="Resource\Lib\Librares\" />
-    <Folder Include="Resource\Pages\Lessons\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataBase\GuitarHelperDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="DataBase\GuitarHelperDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>GuitarHelperDBModel.edmx</DependentUpon>
@@ -269,10 +307,6 @@
       <DependentUpon>GuitarHelperDBModel.edmx</DependentUpon>
       <LastGenOutput>GuitarHelperDBModel.cs</LastGenOutput>
     </Content>
-    <Content Include="DataBase\GuitarHelperDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>GuitarHelperDB.mdf</DependentUpon>
-    </Content>
     <Content Include="GuitarHelperDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -280,6 +314,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GuitarHelperDB.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resource\Pictures\muzshok.by-boi-6.png" />
     <Content Include="Resource\Sounds\Chords\A.wav" />
     <Content Include="Resource\Sounds\Chords\A5.wav" />
     <Content Include="Resource\Sounds\Chords\A7.wav" />
