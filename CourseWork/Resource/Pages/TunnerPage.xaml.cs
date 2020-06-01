@@ -33,6 +33,7 @@ namespace CourseWork.Resource.Pages
         Border[] indicat = new Border[11];
 
 
+
         Dictionary<string, double> noteBaseFreqs = new Dictionary<string, double>()
             {
                 { "E4", 329.63 },
@@ -45,6 +46,15 @@ namespace CourseWork.Resource.Pages
 
         double[] notesFreq = { 82.41, 110, 146.83, 196, 246.94, 329.63 };
         string[] notesName = { "E2", "A", "D", "G", "B", "E4" };
+        double[][] frames =
+            {
+            new double[3] {68.615,82.41,96.205},
+            new double[3] {96.205,110,128.415},
+            new double[3] {128.415,146.83,171.415},
+            new double[3] {171.415,196,221.47},
+            new double[3] { 221.47, 246.94,288.285},
+            new double[3] { 288.285, 329.63,370.975},
+            };
 
         public void SetInDevice(int index)
         {
@@ -231,61 +241,112 @@ namespace CourseWork.Resource.Pages
 
 
         }
-
-        private void ClearIndicators(Border[] ind)
-        {
-            for (int i = 0; i < ind.Length; i++)
-            {
-                ind[i].Opacity = 0.5;
-            }
-        }
-
+        int lastind = 0;
         public string GetNote(double freq)
         {
-            ClearIndicators(indicat);
-            double baseFreq;
-            double[] frames = { 0, 0 };
-            for (int i = 0; i < notesFreq.Length; i++)
+            indicat[lastind].Opacity = 0.5;
+            int curNote = 0;
+            for (int i = 0; i < frames.Length; i++)
             {
-                baseFreq = notesFreq[i];
-                if ((i >= 1) && (i <= 4))
+                if ((freq >= frames[i][0]) && (freq >= frames[i][0]))
                 {
-                    frames = new double[] { ((notesFreq[i] - notesFreq[i - 1]) / 2) - notesFreq[i], (((notesFreq[i] - notesFreq[i + 1]) / 2) + notesFreq[i]) };
-                }
-                else if (i == 0)
-                {
-                    frames = new double[] { 0, ((notesFreq[i] - notesFreq[i + 1]) / 2) + notesFreq[i] };
-                }
-                else if (i == 5)
-                {
-                    frames = new double[] { ((notesFreq[i] - notesFreq[i - 1]) / 2) - notesFreq[i], 9999 };
-                }
-
-                if ((freq > frames[0]) && (freq < frames[1]) || (freq == baseFreq))
-                {
-                   
-                    double step = (frames[1] - frames[0]) / 11;
-                    double[][] indicFrames = new double[11][];
-                    double stepSum = frames[0];
-                    for (int j = 0; j < indicFrames.Length; j++)
-                    {
-                        indicFrames[j] = new double[2] { stepSum, stepSum + step };
-                        stepSum += step;
-
-                    }
-                    for (int j = 0; j < indicat.Length; j++)
-                    {
-                        if ((freq >= indicFrames[j][0]) && (freq <= indicFrames[j][1]))
-                        {
-                            indicat[j].Opacity = 1;
-
-                        }
-                    }
-                    return notesName[i - 1].ToString();
+                    curNote = i;
                 }
             }
-           
+            if ((frames[curNote][1] - 5 < freq) && (frames[curNote][1] + 5 > freq))
+            {
+                indicat[5].Opacity = 1;
+                lastind = 5;
+            }
+            else
+            {
+                double step = 0;
+                if (freq < (frames[curNote][1] - 5))
+                {
+                    step = (frames[curNote][1] - frames[curNote][0]) / 5;
+                    double curFreq = frames[curNote][0];
+                    int ind = 0;
+                   
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if ((freq >= curFreq) && (freq <= curFreq + step))
+                        {
+                            indicat[ind].Opacity = 1;
+                        } 
+                        else
+                        {
+                            ind++;
+                            curFreq += step;
+                        }
+                    }
+                }
+                else if (freq > (frames[curNote][1] + 5))
+                {
+                    step = (frames[curNote][2] - frames[curNote][1]) / 5;
+                    double curFreq = frames[curNote][2];
+                    int ind = 10;
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if ((freq <= curFreq) && (freq >= curFreq - step))
+                        {
+                            indicat[ind].Opacity = 1;
+                            lastind = ind;
+                        }
+                        else
+                        {
+                            ind--;
+                            curFreq -= step;
+                        }
+                    }
+                }
+            }
             return lastNote;
+
+
+
+
+            //double[] frames = { 0, 0 };
+            //for (int i = 0; i < notesFreq.Length; i++)
+            //{
+            //    baseFreq = notesFreq[i];
+            //    if ((i >= 1) && (i <= 4))
+            //    {
+            //        frames = new double[] { ((notesFreq[i] - notesFreq[i - 1]) / 2) - notesFreq[i], (((notesFreq[i] - notesFreq[i + 1]) / 2) + notesFreq[i]) };
+            //    }
+            //    else if (i == 0)
+            //    {
+            //        frames = new double[] { 0, ((notesFreq[i] - notesFreq[i + 1]) / 2) + notesFreq[i] };
+            //    }
+            //    else if (i == 5)
+            //    {
+            //        frames = new double[] { ((notesFreq[i] - notesFreq[i - 1]) / 2) - notesFreq[i], 9999 };
+            //    }
+
+            //    if ((freq > frames[0]) && (freq < frames[1]) || (freq == baseFreq))
+            //    {
+
+            //        double step = (frames[1] - frames[0]) / 11;
+            //        double[][] indicFrames = new double[11][];
+            //        double stepSum = frames[0];
+            //        for (int j = 0; j < indicFrames.Length; j++)
+            //        {
+            //            indicFrames[j] = new double[2] { stepSum, stepSum + step };
+            //            stepSum += step;
+
+            //        }
+            //        for (int j = 0; j < indicat.Length; j++)
+            //        {
+            //            if ((freq >= indicFrames[j][0]) && (freq <= indicFrames[j][1]))
+            //            {
+            //                indicat[j].Opacity = 1;
+
+            //            }
+            //        }
+            //        return notesName[i - 1].ToString();
+            //    }
+            //}
+
+
         }
 
 
@@ -305,7 +366,7 @@ namespace CourseWork.Resource.Pages
                 startRecord.Content = "Выключть";
                 recordStatus = true;
                 timerFrame.Tick += new EventHandler(StartFrame);
-                timerFrame.Interval = new TimeSpan(0, 0, 0, 0, 150);
+                timerFrame.Interval = new TimeSpan(0, 0, 0, 0, 300);
                 timerFrame.Start();
             }
             else

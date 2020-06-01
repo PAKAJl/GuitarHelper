@@ -277,6 +277,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GuitarHelperDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DataBase\GuitarHelperDBModel.edmx.diagram">
       <DependentUpon>GuitarHelperDBModel.edmx</DependentUpon>
     </None>
@@ -290,7 +291,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resource\Lib\Classes\IInterfaces\" />
     <Folder Include="Resource\Lib\Librares\" />
   </ItemGroup>
   <ItemGroup>
