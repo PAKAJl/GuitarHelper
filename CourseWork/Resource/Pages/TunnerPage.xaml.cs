@@ -246,13 +246,17 @@ namespace CourseWork.Resource.Pages
         {
             indicat[lastind].Opacity = 0.5;
             int curNote = 0;
+            
             for (int i = 0; i < frames.Length; i++)
             {
                 if ((freq >= frames[i][0]) && (freq >= frames[i][0]))
                 {
                     curNote = i;
+                    lastNote = notesName[i];
+
                 }
             }
+            
             if ((frames[curNote][1] - 5 < freq) && (frames[curNote][1] + 5 > freq))
             {
                 indicat[5].Opacity = 1;
@@ -272,6 +276,7 @@ namespace CourseWork.Resource.Pages
                         if ((freq >= curFreq) && (freq <= curFreq + step))
                         {
                             indicat[ind].Opacity = 1;
+                            lastind = ind;
                         } 
                         else
                         {
@@ -301,52 +306,6 @@ namespace CourseWork.Resource.Pages
                 }
             }
             return lastNote;
-
-
-
-
-            //double[] frames = { 0, 0 };
-            //for (int i = 0; i < notesFreq.Length; i++)
-            //{
-            //    baseFreq = notesFreq[i];
-            //    if ((i >= 1) && (i <= 4))
-            //    {
-            //        frames = new double[] { ((notesFreq[i] - notesFreq[i - 1]) / 2) - notesFreq[i], (((notesFreq[i] - notesFreq[i + 1]) / 2) + notesFreq[i]) };
-            //    }
-            //    else if (i == 0)
-            //    {
-            //        frames = new double[] { 0, ((notesFreq[i] - notesFreq[i + 1]) / 2) + notesFreq[i] };
-            //    }
-            //    else if (i == 5)
-            //    {
-            //        frames = new double[] { ((notesFreq[i] - notesFreq[i - 1]) / 2) - notesFreq[i], 9999 };
-            //    }
-
-            //    if ((freq > frames[0]) && (freq < frames[1]) || (freq == baseFreq))
-            //    {
-
-            //        double step = (frames[1] - frames[0]) / 11;
-            //        double[][] indicFrames = new double[11][];
-            //        double stepSum = frames[0];
-            //        for (int j = 0; j < indicFrames.Length; j++)
-            //        {
-            //            indicFrames[j] = new double[2] { stepSum, stepSum + step };
-            //            stepSum += step;
-
-            //        }
-            //        for (int j = 0; j < indicat.Length; j++)
-            //        {
-            //            if ((freq >= indicFrames[j][0]) && (freq <= indicFrames[j][1]))
-            //            {
-            //                indicat[j].Opacity = 1;
-
-            //            }
-            //        }
-            //        return notesName[i - 1].ToString();
-            //    }
-            //}
-
-
         }
 
 
