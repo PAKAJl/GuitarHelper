@@ -114,7 +114,6 @@ E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlS
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\NAudio.xml
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\OxyPlot.xml
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\OxyPlot.Wpf.xml
-E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csprojAssemblyReference.cache
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.baml
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.g.cs
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.g.cs
@@ -162,3 +161,4 @@ E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.Co
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CopyComplete
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.exe
 E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.pdb
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csprojAssemblyReference.cache

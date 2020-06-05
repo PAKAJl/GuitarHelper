@@ -315,6 +315,9 @@
       <DependentUpon>GuitarHelperDB.mdf</DependentUpon>
     </Content>
     <Resource Include="Resource\Pictures\muzshok.by-boi-6.png" />
+    <Resource Include="Resource\Pictures\Grif.png" />
+    <Resource Include="Resource\Pictures\Vikl.png" />
+    <Resource Include="Resource\Pictures\Vkl.png" />
     <Content Include="Resource\Sounds\Chords\A.wav" />
     <Content Include="Resource\Sounds\Chords\A5.wav" />
     <Content Include="Resource\Sounds\Chords\A7.wav" />

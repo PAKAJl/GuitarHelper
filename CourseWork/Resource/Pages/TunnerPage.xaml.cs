@@ -1,6 +1,7 @@
 ﻿using NAudio.Wave;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -29,22 +30,9 @@ namespace CourseWork.Resource.Pages
         Sound sound;
         bool recordStatus = false;
         private int inputDevice = 0;
+        private bool chromaticMode = false;
         private DispatcherTimer timerFrame = new DispatcherTimer();
         Border[] indicat = new Border[11];
-
-
-
-        Dictionary<string, double> noteBaseFreqs = new Dictionary<string, double>()
-            {
-                { "E4", 329.63 },
-                { "B", 246.94 },
-                { "G", 196},
-                { "D", 146.83 },
-                { "A", 110 },
-                { "E2", 82.41},
-            };
-
-        double[] notesFreq = { 82.41, 110, 146.83, 196, 246.94, 329.63 };
         string[] notesName = { "E2", "A", "D", "G", "B", "E4" };
         double[][] frames =
             {
@@ -99,7 +87,7 @@ namespace CourseWork.Resource.Pages
                         Height = 40,
                         Width = 20,
                         BorderThickness = thickness,
-                        Background = Brushes.Red,
+                        Background = System.Windows.Media.Brushes.Red,
                     };
                 }
                 else if (i == 10)
@@ -115,7 +103,7 @@ namespace CourseWork.Resource.Pages
                         Height = 40,
                         Width = 20,
                         BorderThickness = thickness,
-                        Background = Brushes.Red,
+                        Background = System.Windows.Media.Brushes.Red,
                     };
                 }
                 else
@@ -133,7 +121,7 @@ namespace CourseWork.Resource.Pages
                             Height = 40,
                             Width = 20,
                             BorderThickness = thickness,
-                            Background = Brushes.OrangeRed,
+                            Background = System.Windows.Media.Brushes.OrangeRed,
                         };
                     }
                     if ((i == 2) || (i == 8))
@@ -144,7 +132,7 @@ namespace CourseWork.Resource.Pages
                             Height = 40,
                             Width = 20,
                             BorderThickness = thickness,
-                            Background = Brushes.Orange
+                            Background = System.Windows.Media.Brushes.Orange
                         };
                     }
                     if ((i == 3) || (i == 7))
@@ -155,7 +143,7 @@ namespace CourseWork.Resource.Pages
                             Height = 40,
                             Width = 20,
                             BorderThickness = thickness,
-                            Background = Brushes.Yellow
+                            Background = System.Windows.Media.Brushes.Yellow
                         };
                     }
                     if ((i == 4) || (i == 6))
@@ -166,7 +154,7 @@ namespace CourseWork.Resource.Pages
                             Height = 40,
                             Width = 20,
                             BorderThickness = thickness,
-                            Background = Brushes.YellowGreen
+                            Background = System.Windows.Media.Brushes.YellowGreen
                         };
                     }
                     if (i == 5)
@@ -177,7 +165,7 @@ namespace CourseWork.Resource.Pages
                             Height = 40,
                             Width = 20,
                             BorderThickness = thickness,
-                            Background = Brushes.Lime
+                            Background = System.Windows.Media.Brushes.Lime
                         };
                     }
 
@@ -335,6 +323,24 @@ namespace CourseWork.Resource.Pages
                 waveIn.StopRecording();
                 waveIn.Dispose();
                 timerFrame.Stop();
+            }
+        }
+ 
+        private void AutoMode_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (chromaticMode)
+            {
+                string imagePath = $@"../../Resource/Pictures/Vkl.png";
+                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+                AutoMode.Source = new BitmapImage(imageUri);
+                chromaticMode = false;
+            }
+            else
+            {
+                string imagePath = $@"../../Resource/Pictures/Vikl.png";
+                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+                AutoMode.Source = new BitmapImage(imageUri);
+                chromaticMode = true;
             }
         }
     }

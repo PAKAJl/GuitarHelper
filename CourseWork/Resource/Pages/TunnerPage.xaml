@@ -8,52 +8,53 @@
       Title="TunnerPage"
       Background="#FF525252">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="170"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+    <Grid VerticalAlignment="Center" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" VerticalAlignment="Center" >
+            <StackPanel >
                 <Label x:Name="noteLabel" Content="Note" Foreground="White" FontFamily="Rubik" HorizontalAlignment="Center" FontSize="52"/>
-                <Grid Grid.Row="1">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="♭" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
+                    <StackPanel Width="220" HorizontalAlignment="Center" x:Name="indicators" Orientation="Horizontal" Grid.ColumnSpan="3"/>
+                    <Label Content="#" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
+                    
+                </StackPanel>
+                <Label x:Name="freqLabel" Grid.Row="2" Content="Freq" Foreground="White" FontFamily="Rubik" HorizontalAlignment="Center" FontSize="36"/>
+                <Button  x:Name="startRecord" Content="Включить" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100" Click="startRecord_Click"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                    <Label Content="Хроматический режим" Foreground="White" FontSize="14" FontFamily="Rubik" VerticalContentAlignment="Center"/>
+                    <Image Source="/Resource/Pictures/Vkl.png" Height="20" Margin="10" x:Name="AutoMode" MouseDown="AutoMode_MouseDown"/>
+                </StackPanel>
+
+                <StackPanel VerticalAlignment="Top" Margin="0,10">
+                    <Label Content="Выберите устройство записи" VerticalAlignment="Center" FontFamily="Rubik" Foreground="White" HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="cdDevice" Height="30" Width="200"/>
+                </StackPanel>
+                <Label Content="Ручной режим" VerticalAlignment="Center" FontFamily="Rubik" Foreground="White" HorizontalAlignment="Center"/>
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
-                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="♭" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
-                    <StackPanel Grid.Column="1" HorizontalAlignment="Center" x:Name="indicators" Orientation="Horizontal">
-                        
+                    <StackPanel Grid.Column="0" HorizontalAlignment="Right">
+                        <Button Content="4 струна: D" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button Content="5 струна: A" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button Content="6 струна: E2" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
                     </StackPanel>
-                    <Label Content="#" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Rubik"/>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Left">
+                        <Button Content="3 струна: G" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button Content="2 струна: B" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button Content="1 струна: E4" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                    </StackPanel>
                 </Grid>
-
-
-                <Label x:Name="freqLabel" Grid.Row="2" Content="Freq" Foreground="White" FontFamily="Rubik" HorizontalAlignment="Center" FontSize="36"/>
-            </Grid>
-            <Grid Grid.Row="1" Height="30" Width="80">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="26"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Button Grid.Row="0" x:Name="startRecord" Content="Включить" Width="80" FontFamily="Rubik" Background="#F9D100" Click="startRecord_Click"/>
-            </Grid>
-        </Grid>
-        <Grid Grid.Row="1">
-            <StackPanel VerticalAlignment="Center">
-                <Label Content="Выберите устройство записи" VerticalAlignment="Center" FontFamily="Rubik" Foreground="White" HorizontalAlignment="Center"/>
-                <ComboBox x:Name="cdDevice" Height="30" Width="200"/>
+                
             </StackPanel>
+            
         </Grid>
+        <Image Margin="0,30,0,0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Source="/Resource/Pictures/Grif.png" />
+
     </Grid>
 </Page>
