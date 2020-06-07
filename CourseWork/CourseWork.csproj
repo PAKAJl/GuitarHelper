@@ -308,16 +308,18 @@
       <LastGenOutput>GuitarHelperDBModel.cs</LastGenOutput>
     </Content>
     <Content Include="GuitarHelperDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="GuitarHelperDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>GuitarHelperDB.mdf</DependentUpon>
     </Content>
     <Resource Include="Resource\Pictures\muzshok.by-boi-6.png" />
     <Resource Include="Resource\Pictures\Grif.png" />
     <Resource Include="Resource\Pictures\Vikl.png" />
     <Resource Include="Resource\Pictures\Vkl.png" />
+    <Resource Include="icon.png" />
+    <Resource Include="Resource\Pictures\hand.png" />
     <Content Include="Resource\Sounds\Chords\A.wav" />
     <Content Include="Resource\Sounds\Chords\A5.wav" />
     <Content Include="Resource\Sounds\Chords\A7.wav" />

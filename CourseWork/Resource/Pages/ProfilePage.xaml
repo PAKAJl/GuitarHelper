@@ -101,14 +101,14 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0">
-                <Label  x:Name="newNameLabel" Margin="10,0" Content="Новое имя:" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="16" Foreground="White"/>
-                <TextBox x:Name="newNameBox" Margin="10,0" FontFamily="Rubik" FontSize="16"/>
+                <Label  x:Name="newNameLabel" Margin="10,0" Content="Новое имя" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="16" Foreground="White"/>
+                <TextBox x:Name="newNameBox" Margin="10,0" FontFamily="Rubik" FontSize="20"/>
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <Label x:Name="oldPassLabel" Margin="10,0" Content="Старый пароль:" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="16" Foreground="White"/>
-                <PasswordBox x:Name="oldPassBox" Margin="10,0" FontFamily="Rubik" FontSize="16"/>
-                <Label x:Name="newPassLabel" Margin="10,0" Grid.Row="2" Content="Новый пароль:" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="16" Foreground="White"/>
-                <PasswordBox x:Name="newPassBox" Margin="10,0" FontFamily="Rubik" FontSize="16"/>
+                <Label x:Name="oldPassLabel" Margin="10,0" Content="Старый пароль" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="16" Foreground="White"/>
+                <PasswordBox x:Name="oldPassBox" Margin="10,0" FontFamily="Rubik" FontSize="20"/>
+                <Label x:Name="newPassLabel" Margin="10,0" Grid.Row="2" Content="Новый пароль" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="16" Foreground="White"/>
+                <PasswordBox x:Name="newPassBox" Margin="10,0" FontFamily="Rubik" FontSize="20"/>
             </StackPanel>
         </Grid>
         

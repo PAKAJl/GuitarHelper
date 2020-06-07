@@ -63,12 +63,12 @@
             <RowDefinition Height="70"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Логин" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="1" x:Name="loginTextBox" Height="25" Width="200" VerticalAlignment="Top"/>
-        <Label Grid.Row="2" Content="Пароль" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-        <PasswordBox Grid.Row="3" x:Name="passwordTextBox" Height="25" Width="200" VerticalAlignment="Top"/>
-        <Button Grid.Row="4" Click="signInButton_Click" x:Name="signInButton" Content="Войти" Width="200" Height="50" VerticalAlignment="Top" FontFamily="Rubik" Background="#F9D100"/>
+        <Label Grid.Row="0" Content="Логин" Foreground="White" FontFamily="Rubik" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="1" FontFamily="Rubik" x:Name="loginTextBox" FontSize="20" Width="200" VerticalAlignment="Top"/>
+        <Label Grid.Row="2" Content="Пароль" Foreground="White" FontFamily="Rubik" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <PasswordBox Grid.Row="3"  FontFamily="Rubik" x:Name="passwordTextBox"  FontSize="20" Width="200" VerticalAlignment="Top"/>
+        <Button Grid.Row="4" Click="signInButton_Click"  x:Name="signInButton" Content="Войти" Width="200" Height="50" VerticalAlignment="Top" FontFamily="Rubik" Background="#F9D100"/>
         <Button Margin="0 10" Click="signUpButton_Click" Grid.Row="5" x:Name="signUpButton" Content="Зарегистрироваться" Width="200" Height="50" VerticalAlignment="Top" FontFamily="Rubik" Background="#F9D100"/>
-        <Button x:Name="toRecovery" Content="Забыли пароль?" Click="toRecovery_Click" Background="#FF525252" Width="120" Height="20" Grid.Row="6" VerticalAlignment="Top" Style="{DynamicResource AsideButtons}"/>
+        <Button x:Name="toRecovery" Content="Забыли пароль?" FontSize="16" FontFamily="Rubik" Click="toRecovery_Click" Background="#FF525252" Width="120" Height="20" Grid.Row="6" VerticalAlignment="Top" Style="{DynamicResource AsideButtons}"/>
     </Grid>
 </Page>

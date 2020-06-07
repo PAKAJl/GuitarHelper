@@ -30,7 +30,8 @@ namespace CourseWork.Resource.Pages
         Sound sound;
         bool recordStatus = false;
         private int inputDevice = 0;
-        private bool chromaticMode = false;
+        private bool chromaticMode = true;
+        private int manualNumber = -1;
         private DispatcherTimer timerFrame = new DispatcherTimer();
         Border[] indicat = new Border[11];
         string[] notesName = { "E2", "A", "D", "G", "B", "E4" };
@@ -222,9 +223,20 @@ namespace CourseWork.Resource.Pages
         {
             this.Dispatcher.BeginInvoke((ThreadStart)delegate ()
             {
-                noteLabel.Content = GetNote(freq);
-                lastNote = noteLabel.Content.ToString();
-                freqLabel.Content = $"{freq:0.00}";
+                if (manualNumber == -1)
+                {
+                    noteLabel.Content = GetNote(freq);
+                    lastNote = noteLabel.Content.ToString();
+                    freqLabel.Content = $"{freq:0.00}";
+                }
+                //В разработке
+                //else
+                //{
+                //    noteLabel.Content = GetNote(manualNumber,freq);
+                //    lastNote = noteLabel.Content.ToString();
+                //    freqLabel.Content = $"{freq:0.00}";
+                //}
+                
             });
 
 
@@ -234,7 +246,7 @@ namespace CourseWork.Resource.Pages
         {
             indicat[lastind].Opacity = 0.5;
             int curNote = 0;
-            
+
             for (int i = 0; i < frames.Length; i++)
             {
                 if ((freq >= frames[i][0]) && (freq >= frames[i][0]))
@@ -244,7 +256,7 @@ namespace CourseWork.Resource.Pages
 
                 }
             }
-            
+
             if ((frames[curNote][1] - 5 < freq) && (frames[curNote][1] + 5 > freq))
             {
                 indicat[5].Opacity = 1;
@@ -258,14 +270,14 @@ namespace CourseWork.Resource.Pages
                     step = (frames[curNote][1] - frames[curNote][0]) / 5;
                     double curFreq = frames[curNote][0];
                     int ind = 0;
-                   
+
                     for (int j = 0; j < 5; j++)
                     {
                         if ((freq >= curFreq) && (freq <= curFreq + step))
                         {
                             indicat[ind].Opacity = 1;
                             lastind = ind;
-                        } 
+                        }
                         else
                         {
                             ind++;
@@ -297,6 +309,7 @@ namespace CourseWork.Resource.Pages
         }
 
 
+
         private void StartFrame(object sender, EventArgs e)
         {
             this.Dispatcher.BeginInvoke((ThreadStart)delegate ()
@@ -325,23 +338,126 @@ namespace CourseWork.Resource.Pages
                 timerFrame.Stop();
             }
         }
- 
-        private void AutoMode_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (chromaticMode)
-            {
-                string imagePath = $@"../../Resource/Pictures/Vkl.png";
-                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
-                AutoMode.Source = new BitmapImage(imageUri);
-                chromaticMode = false;
-            }
-            else
-            {
-                string imagePath = $@"../../Resource/Pictures/Vikl.png";
-                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
-                AutoMode.Source = new BitmapImage(imageUri);
-                chromaticMode = true;
-            }
-        }
+
+        //В разработке
+        //private void AutoMode_MouseDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    if (chromaticMode)
+        //    {
+        //        string imagePath = $@"../../Resource/Pictures/Vkl.png";
+        //        Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+        //        AutoMode.Source = new BitmapImage(imageUri);
+        //        chromaticMode = false;
+        //        recordStatus = true;
+        //        startRecord_Click(sender, e);
+        //    }
+        //    else
+        //    {
+        //        string imagePath = $@"../../Resource/Pictures/Vikl.png";
+        //        Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+        //        AutoMode.Source = new BitmapImage(imageUri);
+        //        chromaticMode = true;
+        //        recordStatus = true;
+        //        startRecord_Click(sender, e);
+        //        manualNumber = -1;
+        //    }
+        //}
+
+        //private string GetNote(int stringNumber,double freq)
+        //{
+        //    indicat[lastind].Opacity = 0.5;
+        //    int curNote = stringNumber;
+        //    if ((frames[curNote][1] - 5 < freq) && (frames[curNote][1] + 5 > freq))
+        //    {
+        //        indicat[5].Opacity = 1;
+        //        lastind = 5;
+        //    }
+        //    else
+        //    {
+        //        double step = 0;
+        //        if (freq < (frames[curNote][1] - 5))
+        //        {
+        //            step = (frames[curNote][1] - frames[curNote][0]) / 5;
+        //            double curFreq = frames[curNote][0];
+        //            int ind = 0;
+
+        //            for (int j = 0; j < 5; j++)
+        //            {
+        //                if ((freq >= curFreq) && (freq <= curFreq + step))
+        //                {
+        //                    indicat[ind].Opacity = 1;
+        //                    lastind = ind;
+        //                }
+        //                else
+        //                {
+        //                    ind++;
+        //                    curFreq += step;
+        //                }
+        //            }
+        //        }
+        //        else if (freq > (frames[curNote][1] + 5))
+        //        {
+        //            step = (frames[curNote][2] - frames[curNote][1]) / 5;
+        //            double curFreq = frames[curNote][2];
+        //            int ind = 10;
+        //            for (int j = 0; j < 5; j++)
+        //            {
+        //                if ((freq <= curFreq) && (freq >= curFreq - step))
+        //                {
+        //                    indicat[ind].Opacity = 1;
+        //                    lastind = ind;
+        //                }
+        //                else
+        //                {
+        //                    ind--;
+        //                    curFreq -= step;
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return notesName[stringNumber];
+        //}
+
+        //private void firstString_Click(object sender, RoutedEventArgs e)
+        //{
+        //    manualNumber = 5;
+        //    chromaticMode = false;
+        //    AutoMode_MouseDown(sender, (MouseButtonEventArgs)e);
+        //}
+
+        //private void secondString_Click(object sender, RoutedEventArgs e)
+        //{
+        //    manualNumber = 4;
+        //    chromaticMode = false;
+        //    AutoMode_MouseDown(sender, (MouseButtonEventArgs)e);
+        //}
+
+        //private void thirdString_Click(object sender, RoutedEventArgs e)
+        //{
+        //    manualNumber = 3;
+        //    chromaticMode = false;
+        //    AutoMode_MouseDown(sender, (MouseButtonEventArgs)e);
+        //}
+
+        //private void sixString_Click(object sender, RoutedEventArgs e)
+        //{
+        //    manualNumber = 0;
+        //    chromaticMode = false;
+        //    AutoMode_MouseDown(sender, (MouseButtonEventArgs)e);
+        //}
+
+        //private void fiveString_Click(object sender, RoutedEventArgs e)
+        //{
+        //    manualNumber = 1;
+        //    chromaticMode = false;
+        //    AutoMode_MouseDown(sender, (MouseButtonEventArgs)e);
+        //}
+
+        //private void fourString_Click(object sender, RoutedEventArgs e)
+        //{
+        //    manualNumber = 2;
+        //    chromaticMode = false;
+        //    AutoMode_MouseDown(sender, (MouseButtonEventArgs)e);
+        //}
     }
 }

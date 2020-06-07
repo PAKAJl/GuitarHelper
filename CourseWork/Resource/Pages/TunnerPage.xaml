@@ -24,14 +24,12 @@
                 </StackPanel>
                 <Label x:Name="freqLabel" Grid.Row="2" Content="Freq" Foreground="White" FontFamily="Rubik" HorizontalAlignment="Center" FontSize="36"/>
                 <Button  x:Name="startRecord" Content="Включить" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100" Click="startRecord_Click"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                    <Label Content="Хроматический режим" Foreground="White" FontSize="14" FontFamily="Rubik" VerticalContentAlignment="Center"/>
-                    <Image Source="/Resource/Pictures/Vkl.png" Height="20" Margin="10" x:Name="AutoMode" MouseDown="AutoMode_MouseDown"/>
-                </StackPanel>
+               
 
-                <StackPanel VerticalAlignment="Top" Margin="0,10">
-                    <Label Content="Выберите устройство записи" VerticalAlignment="Center" FontFamily="Rubik" Foreground="White" HorizontalAlignment="Center"/>
-                    <ComboBox x:Name="cdDevice" Height="30" Width="200"/>
+                <!--В разработке-->
+                <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                    <Label Content="Хроматический режим" Foreground="White" FontSize="14" FontFamily="Rubik" VerticalContentAlignment="Center"/>
+                    <Image Source="/Resource/Pictures/Vikl.png" Height="20" Margin="10" x:Name="AutoMode" MouseDown="AutoMode_MouseDown"/>
                 </StackPanel>
                 <Label Content="Ручной режим" VerticalAlignment="Center" FontFamily="Rubik" Foreground="White" HorizontalAlignment="Center"/>
                 <Grid>
@@ -40,17 +38,20 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" HorizontalAlignment="Right">
-                        <Button Content="4 струна: D" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
-                        <Button Content="5 струна: A" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
-                        <Button Content="6 струна: E2" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button x:Name="fourString" Click="fourString_Click" Content="4 струна: D" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button x:Name="fiveString" Click="fiveString_Click" Content="5 струна: A" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button x:Name="sixString" Click="sixString_Click" Content="6 струна: E2" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1" HorizontalAlignment="Left">
-                        <Button Content="3 струна: G" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
-                        <Button Content="2 струна: B" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
-                        <Button Content="1 струна: E4" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button x:Name="thirdString" Click="thirdString_Click" Content="3 струна: G" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button x:Name="secondString" Click="secondString_Click"  Content="2 струна: B" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
+                        <Button x:Name="firstString" Click="firstString_Click" Content="1 струна: E4" Margin="5" Width="80" Height="30" FontFamily="Rubik" Background="#F9D100"/>
                     </StackPanel>
-                </Grid>
-                
+                </Grid>-->
+                <StackPanel VerticalAlignment="Top" Margin="0,10">
+                    <Label Content="Выберите устройство записи" VerticalAlignment="Center" FontFamily="Rubik" Foreground="White" HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="cdDevice" Height="30" Width="200"/>
+                </StackPanel>
             </StackPanel>
             
         </Grid>

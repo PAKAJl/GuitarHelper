@@ -23,14 +23,12 @@
         <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="10">
             <Label Content="Выберите устройство записи" VerticalAlignment="Center" FontFamily="Rubik" Foreground="White" HorizontalAlignment="Center"/>
             <ComboBox x:Name="cdDevice" Height="30" Width="200"/>
-            <Grid Margin="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="1" x:Name="secLabel" Content="00" FontFamily="Rubik" HorizontalAlignment="Left" Foreground="White" FontSize="20"/>
-                <Label Grid.Column="0" x:Name="minLabel" Content="00" FontFamily="Rubik" HorizontalAlignment="Right" Foreground="White" FontSize="20"/>
-            </Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Label  x:Name="minLabel" Content="00" FontFamily="Rubik" HorizontalAlignment="Left" Foreground="White" FontSize="20"/>
+                <Label   Content=":" FontFamily="Rubik" HorizontalAlignment="Left" Foreground="White" FontSize="20"/>
+                <Label x:Name="secLabel" Content="00" FontFamily="Rubik" HorizontalAlignment="Right" Foreground="White" FontSize="20"/>
+            </StackPanel>
+  
             <Button Grid.Row="1" x:Name="recordButton" Click="recordButton_Click"  Content="Начать запись" Width="200" Height="50" VerticalAlignment="Bottom" FontFamily="Rubik" Background="#F9D100" Margin="10"/>
         </StackPanel>
     </Grid>
