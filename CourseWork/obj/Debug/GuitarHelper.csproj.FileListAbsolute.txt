@@ -1,0 +1,126 @@
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelperDB.mdf
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelperDB_log.ldf
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelper.exe.config
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelper.exe.manifest
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelper.application
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelper.exe
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\GuitarHelper.pdb
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\EntityFramework.dll
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlServer.dll
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\NAudio.dll
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\EntityFramework.xml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlServer.xml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\bin\Debug\NAudio.xml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ApplicaturePage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ChordsPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson1\Lesson1Page1.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson2\Lesson2.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson3\Lesson3.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson4\Lesson4.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson5\Lesson5.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\netResources\netResources.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LoginPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RegisterPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\App.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper_Content.g.cs
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper_MarkupCompile.cache
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper_MarkupCompile.lref
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\MainWindow.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ApplicaturePage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ChordsPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson1\Lesson1Page1.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson2\Lesson2.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson3\Lesson3.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson4\Lesson4.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson5\Lesson5.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\netResources\netResources.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\LoginPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Resource\Pages\RegisterPage.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.baml
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.g.resources
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.Properties.Resources.resources
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.csproj.GenerateResource.cache
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.csproj.CoreCompileInputs.cache
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.exe.manifest
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.application
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.csproj.CopyComplete
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.exe
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.pdb
+E:\!!!учеба\CourseWork\CourseWork\CourseWork\obj\Debug\GuitarHelper.csprojAssemblyReference.cache
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\GuitarHelperDB.mdf
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\GuitarHelperDB_log.ldf
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\GuitarHelper.exe.config
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\GuitarHelper.exe.manifest
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\GuitarHelper.application
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\GuitarHelper.exe
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\GuitarHelper.pdb
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\EntityFramework.dll
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlServer.dll
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\NAudio.dll
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\EntityFramework.xml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\EntityFramework.SqlServer.xml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\bin\Debug\NAudio.xml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\MainWindow.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\ApplicaturePage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\ChordsPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson1\Lesson1Page1.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson2\Lesson2.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson3\Lesson3.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson4\Lesson4.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson5\Lesson5.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\netResources\netResources.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\LoginPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\RegisterPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\TunnerPage.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\App.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper_Content.g.cs
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper_MarkupCompile.cache
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper_MarkupCompile.lref
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\MainWindow.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\AddSongPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\ApplicaturePage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\ChordsPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\LessonsPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson1\Lesson1Page1.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson2\Lesson2.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson3\Lesson3.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson4\Lesson4.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\Lesson5\Lesson5.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\Lessons\netResources\netResources.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\LoginPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\ProfilePage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecorderPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\RecoveryPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Resource\Pages\RegisterPage.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\Windows\MetronomeWin.baml
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.g.resources
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\CourseWork.Properties.Resources.resources
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.csproj.GenerateResource.cache
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.csproj.CoreCompileInputs.cache
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.exe.manifest
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.application
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.csproj.CopyComplete
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.exe
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.pdb
+E:\!!!учеба\!!!!Курсач по КПиЯП\CourseWork\CourseWork\obj\Debug\GuitarHelper.csprojAssemblyReference.cache

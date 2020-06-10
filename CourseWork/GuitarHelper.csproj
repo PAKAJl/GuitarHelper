@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3EB0D8A-CE06-4652-9232-D0D016CAA326}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CourseWork</RootNamespace>
+    <AssemblyName>GuitarHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Users\campu\Desktop\WebSite\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A6100B3C68F103F9A7F2C04EE3403AAE11C65A92</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GuitarHelper_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DataBase\GuitarHelperDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuitarHelperDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GuitarHelperDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuitarHelperDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GuitarHelperDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuitarHelperDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Songs.cs">
+      <DependentUpon>GuitarHelperDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Users.cs">
+      <DependentUpon>GuitarHelperDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Lib\Classes\ConnectedClass.cs" />
+    <Compile Include="Resource\Lib\Classes\Autocorrelator.cs" />
+    <Compile Include="Resource\Lib\Classes\Pitch.cs" />
+    <Compile Include="Resource\Lib\Classes\Sound.cs" />
+    <Compile Include="Resource\Lib\Classes\Transporation.cs" />
+    <Compile Include="Resource\Pages\AddSongPage.xaml.cs">
+      <DependentUpon>AddSongPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\ApplicaturePage.xaml.cs">
+      <DependentUpon>ApplicaturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\ChordsPage.xaml.cs">
+      <DependentUpon>ChordsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\LessonsPage.xaml.cs">
+      <DependentUpon>LessonsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson1\Lesson1Page1.xaml.cs">
+      <DependentUpon>Lesson1Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson2\Lesson2.xaml.cs">
+      <DependentUpon>Lesson2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson3\Lesson3.xaml.cs">
+      <DependentUpon>Lesson3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson4\Lesson4.xaml.cs">
+      <DependentUpon>Lesson4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\Lesson5\Lesson5.xaml.cs">
+      <DependentUpon>Lesson5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\Lessons\netResources\netResources.xaml.cs">
+      <DependentUpon>netResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\RecorderPage.xaml.cs">
+      <DependentUpon>RecorderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\RecoveryPage.xaml.cs">
+      <DependentUpon>RecoveryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Pages\TunnerPage.xaml.cs">
+      <DependentUpon>TunnerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MetronomeWin.xaml.cs">
+      <DependentUpon>MetronomeWin.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resource\Pages\AddSongPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\ApplicaturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\ChordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\LessonsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson1\Lesson1Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson2\Lesson2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson3\Lesson3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson4\Lesson4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\Lesson5\Lesson5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\Lessons\netResources\netResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\RecorderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\RecoveryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Pages\TunnerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MetronomeWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EntityDeploy Include="DataBase\GuitarHelperDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GuitarHelperDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataBase\GuitarHelperDBModel.edmx.diagram">
+      <DependentUpon>GuitarHelperDBModel.edmx</DependentUpon>
+    </None>
+    <None Include="GuitarHelper_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\Lib\Librares\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\GuitarHelperDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GuitarHelperDBModel.edmx</DependentUpon>
+      <LastGenOutput>GuitarHelperDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataBase\GuitarHelperDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GuitarHelperDBModel.edmx</DependentUpon>
+      <LastGenOutput>GuitarHelperDBModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="GuitarHelperDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GuitarHelperDB_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>GuitarHelperDB.mdf</DependentUpon>
+    </Content>
+    <Resource Include="Resource\Pictures\muzshok.by-boi-6.png" />
+    <Resource Include="Resource\Pictures\Grif.png" />
+    <Resource Include="Resource\Pictures\Vikl.png" />
+    <Resource Include="Resource\Pictures\Vkl.png" />
+    <Resource Include="icon.png" />
+    <Resource Include="Resource\Pictures\hand.png" />
+    <Resource Include="Resource\Pictures\Logo.png" />
+    <Content Include="Resource\Sounds\Chords\A.wav" />
+    <Content Include="Resource\Sounds\Chords\A5.wav" />
+    <Content Include="Resource\Sounds\Chords\A7.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Adiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Am.wav" />
+    <Content Include="Resource\Sounds\Chords\B.wav" />
+    <Content Include="Resource\Sounds\Chords\B5.wav" />
+    <Content Include="Resource\Sounds\Chords\B7.wav" />
+    <Content Include="Resource\Sounds\Chords\Bm.wav" />
+    <Content Include="Resource\Sounds\Chords\C.wav" />
+    <Content Include="Resource\Sounds\Chords\C5.wav" />
+    <Content Include="Resource\Sounds\Chords\C7.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Cdiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Cm.wav" />
+    <Content Include="Resource\Sounds\Chords\D.wav" />
+    <Content Include="Resource\Sounds\Chords\D5.wav" />
+    <Content Include="Resource\Sounds\Chords\D7.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Ddiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Dm.wav" />
+    <Content Include="Resource\Sounds\Chords\E.wav" />
+    <Content Include="Resource\Sounds\Chords\E5.wav" />
+    <Content Include="Resource\Sounds\Chords\E7.wav" />
+    <Content Include="Resource\Sounds\Chords\Em.wav" />
+    <Content Include="Resource\Sounds\Chords\F.wav" />
+    <Content Include="Resource\Sounds\Chords\F5.wav" />
+    <Content Include="Resource\Sounds\Chords\F7.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Fdiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Fm.wav" />
+    <Content Include="Resource\Sounds\Chords\G.wav" />
+    <Content Include="Resource\Sounds\Chords\G5.wav" />
+    <Content Include="Resource\Sounds\Chords\G7.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiez.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiez5.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiez7.wav" />
+    <Content Include="Resource\Sounds\Chords\Gdiezm.wav" />
+    <Content Include="Resource\Sounds\Chords\Gm.wav" />
+    <Content Include="Resource\Sounds\HighTick.wav" />
+    <Content Include="Resource\Sounds\LowTick.wav" />
+    <Resource Include="Resource\Pictures\Record.png" />
+    <Resource Include="Resource\Pictures\Unrecord.png" />
+    <Resource Include="Resource\Pictures\Aplicatures\A.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\A5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\A7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Adiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Am.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\B.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\B5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\B7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Bm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\C.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\C5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\C7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cdiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Cm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\D.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\D5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\D7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Ddiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Dm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\E.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\E5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\E7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Em.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\F.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\F5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\F7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fdiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Fm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\G.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\G5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\G7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiez.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiez5.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiez7.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gdiezm.jpg" />
+    <Resource Include="Resource\Pictures\Aplicatures\Gm.jpg" />
+    <Resource Include="Resource\Pictures\Avatars\1.png" />
+    <Resource Include="Resource\Pictures\Avatars\10.png" />
+    <Resource Include="Resource\Pictures\Avatars\11.png" />
+    <Resource Include="Resource\Pictures\Avatars\12.png" />
+    <Resource Include="Resource\Pictures\Avatars\13.png" />
+    <Resource Include="Resource\Pictures\Avatars\14.png" />
+    <Resource Include="Resource\Pictures\Avatars\15.png" />
+    <Resource Include="Resource\Pictures\Avatars\16.png" />
+    <Resource Include="Resource\Pictures\Avatars\2.png" />
+    <Resource Include="Resource\Pictures\Avatars\3.png" />
+    <Resource Include="Resource\Pictures\Avatars\4.png" />
+    <Resource Include="Resource\Pictures\Avatars\5.png" />
+    <Resource Include="Resource\Pictures\Avatars\6.png" />
+    <Resource Include="Resource\Pictures\Avatars\7.png" />
+    <Resource Include="Resource\Pictures\Avatars\8.png" />
+    <Resource Include="Resource\Pictures\Avatars\9.png" />
+    <Resource Include="Resource\Pictures\Avatars\NoAvatar.png" />
+    <Resource Include="Resource\Pictures\Unfavorite.png" />
+    <Resource Include="Resource\Pictures\Favorite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>

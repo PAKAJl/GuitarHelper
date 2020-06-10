@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CourseWork.Windows"
         mc:Ignorable="d"
         Title="Метроном" Height="355.639" Width="619.59"
-        Background="#525252" Closing="Window_Closing">
+        Background="#525252" Closing="Window_Closing" Icon="/GuitarHelper;component/icon.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>

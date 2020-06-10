@@ -40,7 +40,7 @@ namespace CourseWork
         public MainWindow()
         {
             InitializeComponent();
-            
+            connection.LoadDB();
             checkOnClick = new bool[5];
             buttonsList = new Button[5];
             buttonsList[0] = TunnerButton;

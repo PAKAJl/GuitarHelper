@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarHelper", "CourseWork\GuitarHelper.csproj", "{C3EB0D8A-CE06-4652-9232-D0D016CAA326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3EB0D8A-CE06-4652-9232-D0D016CAA326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3EB0D8A-CE06-4652-9232-D0D016CAA326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3EB0D8A-CE06-4652-9232-D0D016CAA326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3EB0D8A-CE06-4652-9232-D0D016CAA326}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5892970-E3DE-4306-9620-06A2F3A1F5A1}
+	EndGlobalSection
+EndGlobal

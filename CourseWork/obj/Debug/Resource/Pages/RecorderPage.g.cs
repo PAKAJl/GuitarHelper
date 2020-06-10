@@ -92,7 +92,7 @@ namespace CourseWork.Resource.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/resource/pages/recorderpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GuitarHelper;component/resource/pages/recorderpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Resource\Pages\RecorderPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

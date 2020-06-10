@@ -180,7 +180,7 @@ namespace CourseWork.Resource.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/resource/pages/profilepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GuitarHelper;component/resource/pages/profilepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Resource\Pages\ProfilePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

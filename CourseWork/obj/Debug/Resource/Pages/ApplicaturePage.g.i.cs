@@ -124,7 +124,7 @@ namespace CourseWork.Resource.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/resource/pages/applicaturepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GuitarHelper;component/resource/pages/applicaturepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Resource\Pages\ApplicaturePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

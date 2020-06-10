@@ -60,7 +60,7 @@ namespace CourseWork.Resource.Pages.Lessons.netResources {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/resource/pages/lessons/netresources/netresources.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GuitarHelper;component/resource/pages/lessons/netresources/netresources.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Resource\Pages\Lessons\netResources\netResources.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

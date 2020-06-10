@@ -90,6 +90,11 @@ namespace CourseWork.Resource.Pages
         bool changedLogOrAvatar = false;
         private void editProfileButton_Click(object sender, RoutedEventArgs e)
         {
+            if (accountName.Content.ToString() == "Гость")
+            {
+                MessageBox.Show("Для выполнения этого действия войдите в аккаунт");
+                return;
+            }
             if (editProfileButton.Content.ToString() == "Редактировать профиль")
             {
                 mode = false;
@@ -126,6 +131,7 @@ namespace CourseWork.Resource.Pages
                         if (CheckOnEqual(connection.GetHash(oldPassBox.Password), connection.GetPass(accountName.Content.ToString())))
                         {
                             connection.UpdateUserPass(accountName.Content.ToString(), newPassBox.Password);
+                            
                         }
                         else
                         {
@@ -171,7 +177,7 @@ namespace CourseWork.Resource.Pages
                 newPassLabel.Visibility = Visibility.Hidden;
                 oldPassBox.Visibility = Visibility.Hidden;
                 oldPassLabel.Visibility = Visibility.Hidden;
-
+                editProfileButton.Content = "Редактировать профиль";
             }
             
         }

@@ -91,7 +91,7 @@ namespace CourseWork.Resource.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/resource/pages/tunnerpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GuitarHelper;component/resource/pages/tunnerpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Resource\Pages\TunnerPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

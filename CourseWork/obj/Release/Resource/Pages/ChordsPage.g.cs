@@ -124,7 +124,7 @@ namespace CourseWork.Resource.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/resource/pages/chordspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GuitarHelper;component/resource/pages/chordspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Resource\Pages\ChordsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
