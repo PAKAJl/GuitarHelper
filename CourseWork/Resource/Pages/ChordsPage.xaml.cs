@@ -63,19 +63,13 @@ namespace CourseWork.Resource.Pages
                         favoriteImage.Source = new BitmapImage(imageUri);
                         currentSongIsFavorite = false;
                     }
-                }
-               
+                }  
             }
-
-
-
-
         }
 
 
         private void delSongButton_Click(object sender, RoutedEventArgs e)
         {
-
             if (songListBox.SelectedItem != null)
             {
                 string songName = songListBox.SelectedItem.ToString();
@@ -89,8 +83,6 @@ namespace CourseWork.Resource.Pages
             {
                 MessageBox.Show("Не выбрана песня");
             }
-
-
         }
 
         private void addSongButton_Click(object sender, RoutedEventArgs e)
@@ -153,29 +145,35 @@ namespace CourseWork.Resource.Pages
         {
             if (mWindow.accountName.Content.ToString() != "Гость")
             {
-                if (!currentSongIsFavorite)
+                if (songListBox.SelectedItem == null)
                 {
-                    connection.AddInFavorite(mWindow.accountName.Content.ToString(), songListBox.SelectedItem.ToString());
-                    currentSongIsFavorite = true;
-                    string imagePath = $"../Pictures/Favorite.png";
-                    Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
-                    favoriteImage.Source = new BitmapImage(imageUri);
+                    MessageBox.Show("Для действия выберите песню");
+                    return;
                 }
                 else
                 {
-                    connection.DeleteFromFavorite(mWindow.accountName.Content.ToString(), songListBox.SelectedItem.ToString());
-                    currentSongIsFavorite = false;
-                    string imagePath = $"../Pictures/Unfavorite.png";
-                    Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
-                    favoriteImage.Source = new BitmapImage(imageUri);
+                    if (!currentSongIsFavorite)
+                    {
+                        connection.AddInFavorite(mWindow.accountName.Content.ToString(), songListBox.SelectedItem.ToString());
+                        currentSongIsFavorite = true;
+                        string imagePath = $"../Pictures/Favorite.png";
+                        Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+                        favoriteImage.Source = new BitmapImage(imageUri);
+                    }
+                    else
+                    {
+                        connection.DeleteFromFavorite(mWindow.accountName.Content.ToString(), songListBox.SelectedItem.ToString());
+                        currentSongIsFavorite = false;
+                        string imagePath = $"../Pictures/Unfavorite.png";
+                        Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+                        favoriteImage.Source = new BitmapImage(imageUri);
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("Для действия войдите в аккаунт!");
             }
-
-
         }
 
         private void favoriteButton_Click(object sender, RoutedEventArgs e)

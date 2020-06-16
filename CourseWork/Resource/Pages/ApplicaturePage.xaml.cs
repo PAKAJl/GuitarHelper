@@ -1,19 +1,9 @@
 ﻿using NAudio.Wave;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CourseWork.Resource.Pages
 {
@@ -23,9 +13,9 @@ namespace CourseWork.Resource.Pages
     public partial class ApplicaturePage : Page
     {
         MainWindow mWindow;
-        private string[] chordList = new string[] {"A","Adiez","B","C","Cdiez","D","Ddiez","E","F","Fdiez","G","Gdiez" };
+        private string[] chordList = new string[] { "A", "Adiez", "B", "C", "Cdiez", "D", "Ddiez", "E", "F", "Fdiez", "G", "Gdiez" };
         private string[] chordList1 = new string[] { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
-        private string[] typeList = new string[] {"","m","5","7"};
+        private string[] typeList = new string[] { "", "m", "5", "7" };
         SoundPlayer chordSound = new SoundPlayer();
         WaveOut outputSound = new WaveOut();
         public ApplicaturePage(MainWindow mainWindow)
@@ -66,9 +56,7 @@ namespace CourseWork.Resource.Pages
             }
             catch (ArgumentException)
             {
-
             }
-            
         }
 
         private void noteListUpButton_Click(object sender, RoutedEventArgs e)
@@ -79,18 +67,17 @@ namespace CourseWork.Resource.Pages
                 noteList.Focus();
                 noteList.ScrollIntoView(noteList.SelectedItem);
             }
-            catch(ArgumentException)
+            catch (ArgumentException)
             {
-
             }
-            
+
         }
 
         private void noteList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
-                string noteName= $@"{chordList[noteList.SelectedIndex]}{typeList[typeChordList.SelectedIndex]}";
+                string noteName = $@"{chordList[noteList.SelectedIndex]}{typeList[typeChordList.SelectedIndex]}";
                 nameNoteLabel.Content = $@"{chordList1[noteList.SelectedIndex]}{typeList[typeChordList.SelectedIndex]}";
                 string imagePath = $@"../Pictures/Aplicatures/{noteName.Trim()}.jpg";
                 Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
@@ -98,25 +85,16 @@ namespace CourseWork.Resource.Pages
                 bitmap.CacheOption = BitmapCacheOption.None;
                 AplicatureImage.Source = bitmap;
             }
-            catch(IndexOutOfRangeException)
+            catch (IndexOutOfRangeException)
             {
-
             }
         }
 
         private void listenButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                string noteName = $@"{chordList[noteList.SelectedIndex]}{typeList[typeChordList.SelectedIndex]}";
-                chordSound = new SoundPlayer($@"../../Resource/Sounds/Chords/{noteName}.wav");
-                chordSound.Play();
-            }
-            catch (Exception ex)
-            {
-
-            }
-           
+            string noteName = $@"{chordList[noteList.SelectedIndex]}{typeList[typeChordList.SelectedIndex]}";
+            chordSound = new SoundPlayer($@"../../Resource/Sounds/Chords/{noteName}.wav");
+            chordSound.Play();
         }
     }
 }

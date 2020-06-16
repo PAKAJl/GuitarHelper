@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using CourseWork.DataBase;
 
 namespace CourseWork.Resource.Pages
@@ -46,6 +37,7 @@ namespace CourseWork.Resource.Pages
                 Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
                 avatarImage.ImageSource = new BitmapImage(imageUri);
                 accountName.Content = mainWindow.accountName.Content.ToString();
+                countFavorite.Content = $"Песен в Избранном: {connection.GetFavoriteSongList(mainWindow.accountName.Content.ToString()).Count}";
             }
             else
             {
@@ -53,9 +45,7 @@ namespace CourseWork.Resource.Pages
                 Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
                 avatarImage.ImageSource = new BitmapImage(imageUri);
                 accountName.Content = mainWindow.accountName.Content.ToString();
-
             }
-
         }
 
         public async Task<bool> TimeInLabel()
@@ -131,7 +121,7 @@ namespace CourseWork.Resource.Pages
                         if (CheckOnEqual(connection.GetHash(oldPassBox.Password), connection.GetPass(accountName.Content.ToString())))
                         {
                             connection.UpdateUserPass(accountName.Content.ToString(), newPassBox.Password);
-                            
+
                         }
                         else
                         {
@@ -179,7 +169,7 @@ namespace CourseWork.Resource.Pages
                 oldPassLabel.Visibility = Visibility.Hidden;
                 editProfileButton.Content = "Редактировать профиль";
             }
-            
+
         }
 
         private void ListDownButton_Click(object sender, RoutedEventArgs e)

@@ -1,10 +1,5 @@
 ﻿using NAudio.Wave;
-using System;
 using System.Collections.Generic;
-using System.Windows.Media;
-using System.Threading;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace CourseWork
 {
@@ -27,7 +22,6 @@ namespace CourseWork
                 { "B", 30.87f },
             };
 
-       
         public void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
             if (bufferedWaveProvider != null)
@@ -55,7 +49,6 @@ namespace CourseWork
                     baseFreq *= 2;
                 }
             }
-
             return null;
         }
     }

@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Media;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
@@ -45,7 +35,6 @@ namespace CourseWork.Windows
 
         SoundPlayer metronomeHighTick = new SoundPlayer("../../Resource/Sounds/HighTick.wav");
         SoundPlayer metronomeLowTick = new SoundPlayer("../../Resource/Sounds/LowTick.wav");
-        //Metronome ticking sound
 
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
@@ -75,9 +64,7 @@ namespace CourseWork.Windows
                     metronome.Interval = TimeSpan.FromMilliseconds(beatTime * 1000);
                     metronome.Tick += new EventHandler(StartMetronom);
                     metronome.Start();
-
                 });
-
             }
             else
             {
@@ -86,7 +73,6 @@ namespace CourseWork.Windows
                 metronome.Stop();
                 beatTime = 0;
             }
-
         }
         int lastindic = 0;
         private void StartMetronom(object sender, EventArgs e)
@@ -153,8 +139,6 @@ namespace CourseWork.Windows
             {
                 beatsInMinBox.Text = "30";
             }
-                
-
         }
 
         private void ticksInTackBox_LostFocus(object sender, RoutedEventArgs e)
@@ -174,7 +158,6 @@ namespace CourseWork.Windows
             {
                 ticksInTackBox.Text = "3";
             }
-
         }
     }
 }

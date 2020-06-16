@@ -1,18 +1,6 @@
 ﻿using CourseWork.DataBase;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CourseWork.Resource.Pages
 {
@@ -41,7 +29,6 @@ namespace CourseWork.Resource.Pages
             {
                 if ((ch >= '0' && ch <= '9') || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
                 {
-
                 }
                 else
                 {
@@ -58,7 +45,6 @@ namespace CourseWork.Resource.Pages
             {
                 if ((ch >= '0' && ch <= '9') || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
                 {
-
                 }
                 else
                 {
@@ -72,8 +58,6 @@ namespace CourseWork.Resource.Pages
             {
                 recoveryLabel.Content = "Код для восстановления: "+connection.GetRecovery(loginTextBox.Text);
             }
-        }
-
-        
+        }  
     }
 }

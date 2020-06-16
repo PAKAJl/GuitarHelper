@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CourseWork.Resource.Lib.Classes
+﻿namespace CourseWork.Resource.Lib.Classes
 {
     class Transporation
     {

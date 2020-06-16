@@ -1,12 +1,7 @@
 ﻿using CourseWork.DataBase;
 using CourseWork.Windows;
-using NAudio.Wave;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -22,7 +17,6 @@ namespace CourseWork
     {
         private static bool[] checkOnClick;
         private static Button[] buttonsList;
-        private Sound sound = new Sound();
         private DispatcherTimer timerInApp = new DispatcherTimer();
         private int timeInSessoin = 0;
         private ConnectedClass connection = new ConnectedClass();
@@ -58,8 +52,8 @@ namespace CourseWork
             avatarImage.ImageSource = new BitmapImage(imageUri);
             logButton.Content = "Войти";
         }
-        
-        
+
+
         private static void ButtonAccsess(int numberButton)
         {
             for (int i = 0; i < checkOnClick.Length; i++)
@@ -134,8 +128,7 @@ namespace CourseWork
                 avatarImage.ImageSource = new BitmapImage(imageUri);
                 accountName.Content = "Гость";
                 Frames.Navigate(new Resource.Pages.LoginPage(this));
-            }   
-               
+            }
         }
 
         private void RecorderButton_Click(object sender, RoutedEventArgs e)

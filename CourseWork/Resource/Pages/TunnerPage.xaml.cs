@@ -1,20 +1,8 @@
 ﻿using NAudio.Wave;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace CourseWork.Resource.Pages
@@ -30,7 +18,6 @@ namespace CourseWork.Resource.Pages
         Sound sound;
         bool recordStatus = false;
         private int inputDevice = 0;
-        private bool chromaticMode = true;
         private int manualNumber = -1;
         private DispatcherTimer timerFrame = new DispatcherTimer();
         Border[] indicat = new Border[11];
@@ -70,8 +57,6 @@ namespace CourseWork.Resource.Pages
             thickness.Left = 0;
             thickness.Left = 0;
             thickness.Left = 0;
-
-
             Border[] ind = new Border[11];
             for (int i = 0; i < ind.Length; i++)
             {
@@ -169,7 +154,6 @@ namespace CourseWork.Resource.Pages
                             Background = System.Windows.Media.Brushes.Lime
                         };
                     }
-
                 }
             }
             return ind;
@@ -236,7 +220,6 @@ namespace CourseWork.Resource.Pages
                 //    lastNote = noteLabel.Content.ToString();
                 //    freqLabel.Content = $"{freq:0.00}";
                 //}
-                
             });
 
 
@@ -312,7 +295,7 @@ namespace CourseWork.Resource.Pages
 
         private void StartFrame(object sender, EventArgs e)
         {
-            this.Dispatcher.BeginInvoke((ThreadStart)delegate ()
+            Dispatcher.BeginInvoke((ThreadStart)delegate ()
             {
                 StartDetect(inputDevice);
             });
@@ -322,7 +305,6 @@ namespace CourseWork.Resource.Pages
         {
             if (!recordStatus)
             {
-
                 startRecord.Content = "Выключть";
                 recordStatus = true;
                 timerFrame.Tick += new EventHandler(StartFrame);

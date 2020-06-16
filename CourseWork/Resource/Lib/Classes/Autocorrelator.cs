@@ -10,12 +10,8 @@
         public Autocorrelator(int sampleRate)
         {
             this.sampleRate = (float)sampleRate;
-            /*int minFreq = 75;
-            int maxFreq = 335;*/
-
             int minFreq = 75;
             int maxFreq = 440;
-
             this.maxOffset = sampleRate / minFreq;
             this.minOffset = sampleRate / maxFreq;
         }
@@ -26,8 +22,8 @@
             {
                 prevBuffer = new float[frames];
             }
-            float secCor = 0;
-            int secLag = 0;
+            float secCor;
+            int secLag;
 
             float maxCorr = 0;
             int maxLag = 0;

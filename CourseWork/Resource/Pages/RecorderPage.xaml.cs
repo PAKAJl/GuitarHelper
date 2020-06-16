@@ -1,24 +1,10 @@
-﻿using System;
-using System.Windows.Controls;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.Windows.Controls;
 using System.Windows.Forms;
-using System.IO;
 using NAudio.Wave;
-using NAudio.FileFormats;
-using NAudio.CoreAudioApi;
-using NAudio;
 using System.Windows.Media.Imaging;
-using System.Threading.Tasks;
-using CourseWork.Resource.Lib.Classes;
-using System.Diagnostics;
-using System.Collections;
-using System.Drawing;
-using Microsoft.VisualBasic;
-using System.Data;
 using System.Runtime.InteropServices;
 using System.Windows.Threading;
+using System;
 
 namespace CourseWork.Resource.Pages
 {

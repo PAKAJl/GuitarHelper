@@ -25,6 +25,9 @@
             <Label Grid.Row="0" Content="Текст с аккордами песни" Foreground="White" Margin="10 0"/>
             <TextBox x:Name="textSong" Grid.Row="1" Margin="10 0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" />
         </Grid>
-        <Button Grid.Row="2" Margin="20 10" x:Name="addSongButton" Content="Добавить Песню" FontFamily="Rubik" Background="#F9D100" Click="addSongButton_Click"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Grid.Row="2" Margin="20 10" x:Name="addSongButton" Content="Добавить Песню" FontFamily="Rubik" Background="#F9D100" Click="addSongButton_Click" Width="300"/>
+            <Button Grid.Row="2" Margin="10" x:Name="cancelButton" Content="Отмена" FontFamily="Rubik" Background="#F9D100" Click="cancelButton_Click" Width="100"/>
+        </StackPanel>
     </Grid>
 </Page>

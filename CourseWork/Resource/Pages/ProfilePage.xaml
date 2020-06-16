@@ -89,7 +89,7 @@
                 <Label x:Name="hourInApp" Content="Нет данных" HorizontalAlignment="Center" FontFamily="Rubic" FontSize="16" Foreground="White"/>
                 <Label x:Name="minInApp" Content="Нет Данных" HorizontalAlignment="Center" FontFamily="Rubic" FontSize="16" Foreground="White"/>
                 <Label x:Name="secInApp" Content="Нет Данных" HorizontalAlignment="Center" FontFamily="Rubic" FontSize="16" Foreground="White" Loaded="secInApp_Loaded"/>
-                <Label Content="Песен в Избранном: 0" HorizontalAlignment="Center" FontFamily="Rubic" FontSize="16" Foreground="White"/>
+                <Label x:Name="countFavorite" Content="Песен в Избранном: 0" HorizontalAlignment="Center" FontFamily="Rubic" FontSize="16" Foreground="White"/>
             </StackPanel>
             <Button Grid.Row="3" Click="editProfileButton_Click" x:Name="editProfileButton" Height="50" Content="Редактировать профиль" FontFamily="Rubik" Background="#F9D100"  Margin="10"/>
             <Button Grid.Row="4" Click="CancelButton_Click" x:Name="CancelButton" Height="40" Content="Отмена" FontFamily="Rubik" Background="#F9D100"  Margin="10,0"/>
