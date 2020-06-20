@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using CourseWork.DataBase;
 
 namespace CourseWork.Resource.Pages
@@ -31,21 +32,13 @@ namespace CourseWork.Resource.Pages
             oldPassLabel.Visibility = Visibility.Hidden;
             this.mainWindow = mainWindow;
             changedLogOrAvatar = false;
-            if (mainWindow.accountName.Content.ToString() != "Гость")
-            {
-                string imagePath = "../../Resource/Pictures/Avatars/" + connection.GetAvatar(mainWindow.accountName.Content.ToString());
-                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
-                avatarImage.ImageSource = new BitmapImage(imageUri);
-                accountName.Content = mainWindow.accountName.Content.ToString();
-                countFavorite.Content = $"Песен в Избранном: {connection.GetFavoriteSongList(mainWindow.accountName.Content.ToString()).Count}";
-            }
-            else
-            {
-                string imagePath = "../../Resource/Pictures/Avatars/NoAvatar.png";
-                Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
-                avatarImage.ImageSource = new BitmapImage(imageUri);
-                accountName.Content = mainWindow.accountName.Content.ToString();
-            }
+            string imagePath = "../../Resource/Pictures/Avatars/" + connection.GetAvatar(mainWindow.accountName.Content.ToString());
+            Uri imageUri = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+            avatarImage.ImageSource = new BitmapImage(imageUri);
+            accountName.Content = mainWindow.accountName.Content.ToString();
+            var listSongs = connection.GetFavoriteSongList(mainWindow.accountName.Content.ToString());
+            int countList = listSongs != null && listSongs.Count > 0 ? listSongs.Count : 0;
+            countFavorite.Content = $"Песен в Избранном: { countList }";
         }
 
         public async Task<bool> TimeInLabel()

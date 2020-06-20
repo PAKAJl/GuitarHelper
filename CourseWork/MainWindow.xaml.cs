@@ -95,7 +95,14 @@ namespace CourseWork
 
         private void toProfileButton_Click(object sender, RoutedEventArgs e)
         {
-            Frames.Navigate(new Resource.Pages.ProfilePage(this));
+            if (accountName.Content.ToString() == "Гость")
+            {
+                MessageBox.Show("Войдите в аккаунт!");
+            }
+            else
+            {
+                Frames.Navigate(new Resource.Pages.ProfilePage(this));
+            }  
         }
 
         private void Window_Closing(object sender, CancelEventArgs e)
@@ -128,6 +135,7 @@ namespace CourseWork
                 avatarImage.ImageSource = new BitmapImage(imageUri);
                 accountName.Content = "Гость";
                 Frames.Navigate(new Resource.Pages.LoginPage(this));
+                logButton.Content = "Войти";
             }
         }
 

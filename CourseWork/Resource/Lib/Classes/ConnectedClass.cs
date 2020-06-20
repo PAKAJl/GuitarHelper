@@ -296,21 +296,19 @@ namespace CourseWork.DataBase
 
         public List<int> GetFavoriteSongList(string login)
         {
-            int[] songsArray = new int[10];
             try
             {
                 using (GuitarHelperDBContext context = new GuitarHelperDBContext())
                 {
                     var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
-                    songsArray = userInfo.FavoritesSongs.Trim().Split(' ').Select(x => int.Parse(x)).ToArray();
+                    return userInfo.FavoritesSongs.Trim().Split(' ').Select(x => int.Parse(x)).ToList();
                 }
             }
             catch
             {
 
             }
-            
-            return songsArray.ToList();
+            return null;
         }
 
         public Dictionary<string, string> SelectFavoriteSong(string login)
@@ -343,12 +341,15 @@ namespace CourseWork.DataBase
                 var userInfo = context.Users.SingleOrDefault(user => user.Login == login);
                 var curentSong = context.Songs.SingleOrDefault(song => song.Name == checkSong);
                 List<int> favoriteSongList = GetFavoriteSongList(login);
-                foreach (var songId in favoriteSongList)
+                if(favoriteSongList != null)
                 {
-                    if (curentSong.SongID == songId)
+                    foreach (var songId in favoriteSongList)
                     {
-                        result = true;
-                        break;
+                        if (curentSong.SongID == songId)
+                        {
+                            result = true;
+                            break;
+                        }
                     }
                 }
             }
